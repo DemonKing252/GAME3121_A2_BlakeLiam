@@ -155,15 +155,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Ball.cpp" />
-    <ClCompile Include="Bat.cpp" />
+    <ClCompile Include="Doodle.cpp" />
+    <ClCompile Include="Platform.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Ball.h" />
-    <ClInclude Include="Bat.h" />
+    <ClInclude Include="Doodle.h" />
+    <ClInclude Include="Platform.h" />
     <ClInclude Include="GameObject.h" />
   </ItemGroup>
   <ItemGroup>

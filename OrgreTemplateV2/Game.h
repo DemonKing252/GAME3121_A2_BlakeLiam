@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-#include "Ball.h"
-#include "Bat.h"
+#include "Doodle.h"
+#include "Platform.h"
 #include "GameObject.h"
 #include <memory>
 #include <cassert>

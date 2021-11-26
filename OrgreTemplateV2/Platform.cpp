@@ -1,4 +1,4 @@
-#include "Bat.h"
+#include "Platform.h"
 
 Platform::Platform(Ogre::Entity* batEntity, Ogre::SceneManager* scnMgr, bool useGravity, float grav)
 {

@@ -1,4 +1,4 @@
-#include "Ball.h"
+#include "Doodle.h"
 
 Doodle::Doodle(Ogre::Entity* ballEntity, Ogre::SceneManager* scnMgr, bool useGravity, float grav)
 {
