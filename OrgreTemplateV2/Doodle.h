@@ -17,7 +17,7 @@ private:
 	/**
 	* @brief (ballShape) Prefab type sphere to represent the main ball
 	*/
-	Ogre::SceneNode* ballShape;
+	Ogre::SceneNode* doodleShape;
 
 	/**
 	* @brief (velocity) Current velocity of the bat
@@ -29,6 +29,9 @@ private:
 	*/
 	Ogre::Vector2 position;
 
+	Ogre::Entity* myEntity;
+
+
 	float m_gravity = 0.f;
 
 public:
@@ -38,7 +41,7 @@ public:
 	/// @param ballEntity A refrence to the entity you want to use
 	/// @param scnMgr A refrence to the scene managerwhat 
 	/// @see Assignment1::setup()
-	Doodle(Ogre::Entity* ballEntity, Ogre::SceneManager* scnMgr, bool useGravity = true, float grav = 9.8f);
+	Doodle(Ogre::String name, Ogre::SceneManager* scnMgr, bool useGravity = true, float grav = 9.8f);
 	
 
 	/// Constructor.
@@ -99,14 +102,16 @@ public:
 	/// @see Ball::setVelocity(Ogre::Vector2 vel) this method is what gets called after a direction is determined
 	/// @param (dt) time elapsed since previous frame (consider using a frame listener to get delta time!)
 	/// @returns no return type
-	void checkBounds(GameObject* go);
+	void checkPlatformBounds(GameObject* go, class Game* gamePtr);
+
+	void checkCameraBounds(class Game* gamePtr);
 
 	/// reset
 	///
 	/// this method is called the moment the ball leaves the boundary. The balls velocity is set to be a random diagonal direction (that is either (1, 1)/(1, -1)/(-1,1)/(-1,-1)
 	/// @param no parameters
 	/// @returns no return type
-	void reset();
+	void reset(class Game* gamePtr);
 
 
 

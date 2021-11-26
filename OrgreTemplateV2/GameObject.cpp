@@ -52,3 +52,13 @@ bool GameObject::IsObjectColliding(GameObject* other)
 
 	return A.intersects(B);
 }
+
+void GameObject::setIndex(int i)
+{
+	this->indexOrder = i;
+}
+
+int GameObject::getIndex() const
+{
+	return indexOrder;
+}

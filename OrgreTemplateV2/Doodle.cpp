@@ -1,11 +1,13 @@
 #include "Doodle.h"
+#include "Game.h"
 
-Doodle::Doodle(Ogre::Entity* ballEntity, Ogre::SceneManager* scnMgr, bool useGravity, float grav)
+Doodle::Doodle(Ogre::String name, Ogre::SceneManager* scnMgr, bool useGravity, float grav)
 {
-	ballShape = scnMgr->getRootSceneNode()->createChildSceneNode();
-	ballShape->setPosition(0, 0, 0);
-	ballShape->setScale(2.f, 2.f, 1.f);
-	ballShape->attachObject(ballEntity);
+	myEntity = scnMgr->createEntity(name);
+	doodleShape = scnMgr->getRootSceneNode()->createChildSceneNode();
+	doodleShape->setPosition(0, 0, 0);
+	doodleShape->setScale(2.f, 2.f, 1.f);
+	doodleShape->attachObject(myEntity);
 
 	velocity = Ogre::Vector2::ZERO;
 	position = Ogre::Vector2::ZERO;
@@ -38,7 +40,7 @@ Ogre::Vector2 Doodle::getPosition() const
 
 Ogre::SceneNode* Doodle::getShape() const
 {
-	return ballShape;
+	return doodleShape;
 }
 
 Ogre::Vector2 Doodle::getVelocity() const
@@ -48,11 +50,11 @@ Ogre::Vector2 Doodle::getVelocity() const
 
 void Doodle::setPosition(Ogre::Vector3 position)
 {
-	ballShape->setPosition(position);
+	doodleShape->setPosition(position);
 	this->position = Ogre::Vector2(position.x, position.y);
 
-	ballShape->_updateBounds();
-	GameObject::setAxisAlignedBox(ballShape->_getWorldAABB());
+	doodleShape->_updateBounds();
+	GameObject::setAxisAlignedBox(doodleShape->_getWorldAABB());
 }
 
 void Doodle::setVelocity(Ogre::Vector2 vel)
@@ -60,9 +62,9 @@ void Doodle::setVelocity(Ogre::Vector2 vel)
 	this->velocity = vel;
 
 	if (velocity.x > 0.f)
-		ballShape->setScale(Ogre::Vector3(-2.f, 2.f, 1.f));
+		doodleShape->setScale(Ogre::Vector3(-2.f, 2.f, 1.f));
 	else if (velocity.x < 0.f)
-		ballShape->setScale(Ogre::Vector3(2.f, 2.f, 1.f));
+		doodleShape->setScale(Ogre::Vector3(2.f, 2.f, 1.f));
 }
 
 void Doodle::update(float dt)
@@ -74,43 +76,50 @@ void Doodle::update(float dt)
 	this->setPosition(Ogre::Vector3(position.x, position.y, 0.f));
 }
 
-void Doodle::checkBounds(GameObject* platformPtr)
+void Doodle::checkPlatformBounds(GameObject* platformPtr, Game* gamePtr)
 {
+	
 	if (!IsObjectColliding(platformPtr))
 		return;
 
 	// expected to be called when its colling
 	if (velocity.y < 0.f && position.y - getAxisAlignedBox().getHalfSize().y >= platformPtr->getPosition().y + platformPtr->getAxisAlignedBox().getHalfSize().y - 0.2f)
-		setVelocity(Ogre::Vector2(getVelocity().x, 7.f));
-	// Handle death
-	/*if (position.x > x * 0.5f)
-		velocity.x *= -1.0f;
-	if (position.x < -x * 0.5f)
-		velocity.x *= -1.0f;
-	if (position.y > y * 0.5f)
-		velocity.y *= -1.0f;*/
-
+	{
+		if (platformPtr->getIndex() == gamePtr->MAX_PLATFORMS - 1)
+		{
+			gamePtr->IncrementScore();
+			gamePtr->refreshUserInterface();
+			gamePtr->SetGameOver(true, GameOutcome::Win);
+		}
+		else 
+		{
+			gamePtr->IncrementScore();
+			gamePtr->refreshUserInterface();
+			setVelocity(Ogre::Vector2(getVelocity().x, 7.f));
+		}
+	}
 }
 
-void Doodle::reset()
+void Doodle::checkCameraBounds(Game* gamePtr)
 {
+	// Check if were outside the camera bounds
+	if (getPosition().y <= gamePtr->camNode->getPosition().y - 6.0f)
+	{
+		if (gamePtr->DecrementLives() <= 0)
+		{
+			gamePtr->refreshUserInterface();
+			gamePtr->SetGameOver(true, GameOutcome::Loss);
+		}
+		else
+		{
+			gamePtr->refreshUserInterface();
+			this->reset(gamePtr);
+		}
+	}
+}
 
-	//// 45-> -45
-	////float randomDir = static_cast<float>(( rand() % 90) - 45);
-	//int ran = rand() % 4;
-	//float randomDir = 0.0f;
-
-	//switch (ran)
-	//{
-	//case 0: randomDir = 45.0f; break;
-	//case 1: randomDir = 135.0f; break;
-	//case 2: randomDir = 225.0f; break;
-	//case 3: randomDir = 315.0f; break;
-	//}
-
-	//float desiredX = 160.0f * cos(randomDir * 3.14159f / 180.0f);
-	//float desiredY = 160.0f * sin(randomDir * 3.14159f / 180.0f);
-
-	//this->setPosition(Ogre::Vector3::ZERO);
-	//this->setVelocity(Ogre::Vector2(desiredX, desiredY));
+void Doodle::reset(Game* gamePtr)
+{
+	this->setVelocity(Ogre::Vector2::ZERO);
+	this->setPosition(gamePtr->camNode->getPosition());
 }

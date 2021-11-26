@@ -6,23 +6,13 @@ Game::Game()
 
 bool Game::frameRenderingQueued(const FrameEvent& evt)
 {
-    //if (latestframerate < 30.f && !gameover)
-    //{
-    //    // if the window gets resized, we dont want the ball to move to the bottom of the screen and result in an instant life lost now
-    //    // would we?
-    //    m_ball->reset();
-    //}
-    //
-    ////std::cout << "viewports: " << getRenderWindow()->getViewport(0)->getActualWidth() << std::endl;
-    //// Pause game when the game is over
-    //if (gameover)
-    //{
-    //    if (m_quitBtn->getState() == OgreBites::ButtonState::BS_DOWN)
-    //    {
-    //        getRoot()->queueEndRendering();
-    //    }
-    //    return true;
-    //}
+    if (isPaused) 
+        if (m_quitBtn->getState() == OgreBites::ButtonState::BS_DOWN)
+            getRoot()->queueEndRendering();
+
+
+    if (isPaused)
+        return true;    
 
     if (timesincelastframe < m_refreshTime)
     {
@@ -43,78 +33,20 @@ bool Game::frameRenderingQueued(const FrameEvent& evt)
         sprintf_s(buffer, "m/s %.5f", evt.timeSinceLastFrame);
         m_mspfLabel->setCaption(buffer);
     }
-
-    // M/s per frame
-    {
-    }
-
+    
+    static_cast<Doodle*>(m_doodle.get())->checkCameraBounds(this);
     for (auto go : m_platforms)
     {
         go->update(evt.timeSinceLastFrame);
         if (go->IsObjectColliding(m_doodle.get()))
         {
             // Safe cast
-
-            static_cast<Doodle*>(m_doodle.get())->checkBounds(go.get());
-            //std::cout << "True  _---------------------------------_------------_" << std::endl;
+            // Since we don't have a virtual method in the base class, since our platform doesn't depend on that method
+            static_cast<Doodle*>(m_doodle.get())->checkPlatformBounds(go.get(), this);
         }
 
     }
     m_doodle->update(evt.timeSinceLastFrame);
-
-
-
-    //m_ball->checkBounds(aspectX, aspectY);
-
-    // Now we move it
-    //m_ball->update(evt.timeSinceLastFrame);
-
-    //m_playerBat->update(evt.timeSinceLastEvent);
-
-    //Vector2 ballPos = m_ball->getPosition();
-    //Vector2 batPos = m_playerBat->getPosition();
-    //
-    //if (ballPos.y < -aspectY * 0.5f)
-    //{
-    //    lives--;
-    //    this->refreshUserInterface();
-    //    if (lives <= 0)
-    //    {
-    //        m_gameOverLabel = mTrayMgr->createLabel(TL_CENTER, "L_GAMEOVER", "GAME OVER!", 150);
-    //        m_quitBtn = mTrayMgr->createButton(TL_CENTER, "L_GAMEOVERBUTTON", "Quit Game", 150);
-    //
-    //
-    //        gameover = true;
-    //    }
-    //    else
-    //    {
-    //        m_ball->reset();
-    //    }
-    //}
-    //
-    //if (ballPos.y < batPos.y + 10.f && ballPos.y > batPos.y - 10.0f && ballPos.x > batPos.x - 50.f && ballPos.x < batPos.x + 50.f)
-    //{
-    //    // Only the first time it collided.
-    //    if (!collisionenter)
-    //    {
-    //        collisionenter = true;
-    //
-    //        score += 10;
-    //        this->refreshUserInterface();
-    //
-    //        Vector2 vel = m_ball->getVelocity();
-    //        vel.y *= -1.0f;
-    //        //std::cout << "DEFLECT!" << std::endl;
-    //        m_ball->setVelocity(vel);
-    //
-    //    }
-    //
-    //}
-    //else
-    //{
-    //    collisionenter = false;
-    //}
-
 
     if (m_doodle->getPosition().y > camNode->getPosition().y)
     {
@@ -123,20 +55,29 @@ bool Game::frameRenderingQueued(const FrameEvent& evt)
         camNode->lookAt(Ogre::Vector3(0, m_doodle->getPosition().y, 0), Node::TS_WORLD);
     }
 
-    //Vector3 move = Vector3(evt.timeSinceLastFrame * 15.f, 0.f, 0.f);
 
     return true;
 }
 bool Game::mouseMoved(const MouseMotionEvent& evt)
 {
     // Pause game when the game is over
-    if (gameover)
+    if (isPaused)
         return true;
 
     float mouseToWorld = (evt.x - (float)getRenderWindow()->getWidth() / 2.0f) * 0.5f;
 
     //m_playerBat->setPosition(Vector3(mouseToWorld, -70.f, 0.f));
     return true;
+}
+int Game::IncrementScore(int by)
+{
+    score += by;
+    return score;
+}
+int Game::DecrementLives()
+{
+    lives--;
+    return lives;
 }
 ManualObject* Game::createMesh(MeshType meshType, const char* name, const char* matName, Ogre::Vector2 uvMap)
 {
@@ -181,9 +122,9 @@ ManualObject* Game::createMesh(MeshType meshType, const char* name, const char* 
     case Game::MeshType::Plane:
 
         mesh->position(-0.5, -0.5, 0.0); mesh->colour(1, 1, 1); mesh->textureCoord(0, 0);   //0
-        mesh->position(0.5, -0.5, 0.0); mesh->colour(1, 1, 1); mesh->textureCoord(uvMap.x, 0);  //1
-        mesh->position(0.5, 0.5, 0.0); mesh->colour(1, 1, 1); mesh->textureCoord(uvMap.x, uvMap.y);    //2
-        mesh->position(-0.5, 0.5, 0.0); mesh->colour(1, 1, 1); mesh->textureCoord(0, uvMap.y);   //3
+        mesh->position( 0.5, -0.5, 0.0); mesh->colour(1, 1, 1); mesh->textureCoord(uvMap.x, 0);  //1
+        mesh->position( 0.5,  0.5, 0.0); mesh->colour(1, 1, 1); mesh->textureCoord(uvMap.x, uvMap.y);    //2
+        mesh->position(-0.5,  0.5, 0.0); mesh->colour(1, 1, 1); mesh->textureCoord(0, uvMap.y);   //3
 
         mesh->triangle(0, 1, 2);		
         mesh->triangle(2, 3, 0);
@@ -204,12 +145,27 @@ void Game::addVertex(ManualObject* meshRef, Ogre::Vector3 pos, Ogre::Vector3 col
     meshRef->colour(col.x, col.y, col.z);
     meshRef->textureCoord(uv.x, uv.y);
 }
+void Game::SetGameOver(bool paused, GameOutcome outcome)
+{
+    this->isPaused = paused;
+
+    if (outcome == GameOutcome::Win)
+    {
+        m_winLabel = mTrayMgr->createLabel(TL_CENTER, "L_GAMEOVER", "YOU WIN!", 150);
+        m_quitBtn = mTrayMgr->createButton(TL_CENTER, "B_QUIT", "Quit", 150);
+    }
+    else if (outcome == GameOutcome::Loss)
+    {
+        m_gameOverLabel = mTrayMgr->createLabel(TL_CENTER, "L_GAMEOVER", "YOU LOSE!", 150);
+        m_quitBtn = mTrayMgr->createButton(TL_CENTER, "B_QUIT", "Quit", 150);
+    }
+}
+bool Game::getIsPaused() const
+{
+    return isPaused;
+}
 void Game::refreshUserInterface()
 {
-    // Note: im not refreshing framerate or m/s here because they are frame dependant
-    // ( i have to update them every frame )
-
-
 
     // Score UI
     {
@@ -311,6 +267,8 @@ void Game::setup()
     m_fpsLabel = mTrayMgr->createLabel(TL_BOTTOMLEFT, "L_FPS", "FPS: 60", 150);
     m_mspfLabel = mTrayMgr->createLabel(TL_BOTTOMRIGHT, "L_MSPF", "m/s: 0.1667", 150);
 
+    //m_gameOverLabel = mTrayMgr->createLabel(TL_CENTER, "L_GAMEOVER", "GAME OVER!", 150);
+    
 
     Ogre::ManualObject* ManualCube = NULL;
     ManualCube = createMesh(Game::MeshType::Cube, "MyCube", "LiamBlakeMaterialRock", Ogre::Vector2(3.0, 1.0));
@@ -319,29 +277,38 @@ void Game::setup()
     Ogre::ManualObject* ManualPlane = NULL;
     ManualPlane = createMesh(Game::MeshType::Plane, "MyPlane", "LiamBlakeMaterialDoodle", Ogre::Vector2(1.0, -1.0));
 
-    Ogre::Entity* doodleEntity = scnMgr->createEntity("MyPlane");
-    Ogre::Entity* ent2 = scnMgr->createEntity("MyCube");
-    Ogre::Entity* ent3 = scnMgr->createEntity("MyCube");
-    Ogre::Entity* ent4 = scnMgr->createEntity("MyCube");
+    srand(unsigned(time(NULL)));
+
+    this->refreshUserInterface();
+
+    // Doodle is given a platform to stand on
+    auto platform = std::make_shared<Platform>("MyCube", scnMgr, false, 0.f);
+    platform->setPosition(Ogre::Vector3(0.f, 0.f, 0.f));
+    platform->setIndex(0);
+    m_platforms.push_back(platform);
 
 
-    auto doodle = std::make_shared<Doodle>(doodleEntity, scnMgr, true, -4.8f);
+    float yoffset = ( (((float)(rand() % 255) / 255.0f) + 0.3f) * 3.8f);
+
+    for (int row = 1; row < MAX_PLATFORMS; row++)
+    {
+        float randX = (((float)(rand() % 255) / 255.0f) - 0.5f) * 13.0f;
+
+        auto platform1 = std::make_shared<Platform>("MyCube", scnMgr, false, 0.f);
+        platform1->setPosition(Ogre::Vector3(randX, yoffset, 0.f));
+        platform1->setIndex(row);
+
+        m_platforms.push_back(platform1);
+
+        yoffset += ((((float)(rand() % 255) / 255.0f) + 0.3f) * 3.8f);
+    }
+
+    auto doodle = std::make_shared<Doodle>("MyPlane", scnMgr, true, -4.8f);
+    doodle->setPosition(Ogre::Vector3(0.f, 0.f, +0.f));
     doodle->setVelocity(Ogre::Vector2(0.f, 7.f));
 
     m_doodle = doodle;
 
-    auto platform1 = std::make_shared<Platform>(ent2, scnMgr, false, 0.f);
-    platform1->setPosition(Ogre::Vector3(0.f, 0.f, 0.f));
-    
-    auto platform2 = std::make_shared<Platform>(ent3, scnMgr, false, 0.f);
-    platform2->setPosition(Ogre::Vector3(+4.f, 0.f, 0.f));
-
-    auto platform3 = std::make_shared<Platform>(ent4, scnMgr, false, 0.f);
-    platform3->setPosition(Ogre::Vector3(+0.f, 4.f, 0.f));
-    
-    m_platforms.push_back(platform1);
-    m_platforms.push_back(platform2);
-    m_platforms.push_back(platform3);
 
     camNode->setPosition(0, m_doodle->getPosition().y, 15);
     camNode->lookAt(Ogre::Vector3(0, m_doodle->getPosition().y, 0), Node::TS_WORLD);

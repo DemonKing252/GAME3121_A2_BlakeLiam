@@ -15,6 +15,7 @@ enum class ObjectType
 class GameObject
 {
 public:
+
 	GameObject();
 	virtual ~GameObject();
 	
@@ -34,11 +35,14 @@ public:
 
 	bool IsObjectColliding(GameObject* other);
 
+	void setIndex(int i);
+	int getIndex() const;
 
 private:
 	ObjectType type;
 
 	Ogre::AxisAlignedBox boundingBox;
 
+	int indexOrder = 0;
 };
 

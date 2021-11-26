@@ -1,12 +1,13 @@
 #include "Platform.h"
 
-Platform::Platform(Ogre::Entity* batEntity, Ogre::SceneManager* scnMgr, bool useGravity, float grav)
+Platform::Platform(Ogre::String name, Ogre::SceneManager* scnMgr, bool useGravity, float grav)
 {
 
+    myEntity = scnMgr->createEntity(name);
     batShape = scnMgr->getRootSceneNode()->createChildSceneNode();
     batShape->setPosition(0, 0, 0);
     batShape->setScale(3.f, 1.f, 1.f);
-    batShape->attachObject(batEntity);
+    batShape->attachObject(myEntity);
 
     if (useGravity)
     {

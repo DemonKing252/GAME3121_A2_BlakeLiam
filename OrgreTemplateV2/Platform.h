@@ -29,6 +29,10 @@ private:
 	*/
 	Ogre::Vector2 position;
 
+
+	Ogre::Entity* myEntity;
+
+
 public:
 
 	/// Constructor for the ball class.
@@ -36,7 +40,7 @@ public:
 	/// @param ballEntity A refrence to the entity you want to use
 	/// @param scnMgr A refrence to the scene managerwhat 
 	/// @see Assignment1::setup()
-	Platform(Ogre::Entity* ballEntity, Ogre::SceneManager* scnMgr, bool useGravity, float grav);
+	Platform(Ogre::String name, Ogre::SceneManager* scnMgr, bool useGravity, float grav);
 
 
 	/// Constructor.

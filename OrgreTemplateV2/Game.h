@@ -9,7 +9,11 @@
 using namespace Ogre;
 using namespace OgreBites;
 
-
+enum GameOutcome
+{
+    Win,
+    Loss
+};
 
 /// Game class
 ///
@@ -65,6 +69,9 @@ public:
     /// @param evt a reference to mouse motion event
     bool mouseMoved(const MouseMotionEvent& evt) override;
 
+    int IncrementScore(int by = 1);
+    int DecrementLives();
+
 
     /**
     * @brief Tray listener used for GUI
@@ -99,14 +106,11 @@ public:
     /**
     * @brief Graphic User Interface label used as milliseconds per frame
     */
-    OgreBites::Label* m_myLabel;
-    /**
-    * @brief Graphic User Interface label used as the engine header
-    */
+
+    OgreBites::Label* m_winLabel;
+    
     OgreBites::Label* m_gameOverLabel;
-    /**
-    * @brief Graphic User Interface label used when you lose all lives
-    */
+
     OgreBites::TrayManager* mTrayMgr;
     /**
     * @brief Graphic User Interface button used to quit the game if you lose the game
@@ -117,13 +121,17 @@ public:
     std::shared_ptr<GameObject> m_doodle;
     std::vector<std::shared_ptr<GameObject>> m_platforms;
 
-    /**
-    * @brief A reference to the ball
-    * @see Bat
-    */
-    //std::shared_ptr<Bat> m_playerBat;
+    void SetGameOver(bool paused, GameOutcome outcome);
+    bool getIsPaused() const;
+
+    const int MAX_PLATFORMS = 36;
+
+    SceneNode* camNode;
 
 private:
+
+    bool isPaused = false;
+
     /**
     * @brief aspect ratio x
     * @note This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for
@@ -178,7 +186,7 @@ private:
     * @brief set to true when you lose all lives
     * @note This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for
     */
-    bool gameover = false;
+
 
 
     SceneManager* scnMgr;
@@ -187,5 +195,4 @@ private:
 
     Ogre::Vector2 vel;
 
-    SceneNode* camNode;
 };
