@@ -1,0 +1,153 @@
+\hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
+\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+Inheritance diagram for Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\item 
+virtual \mbox{\hyperlink{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}{$\sim$\+Game\+Object}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a2fece397b6343682d639f8943f124d0e}{update}} (float dt)
+\item 
+virtual void \mbox{\hyperlink{class_game_object_afbf626795852f40b5ec19fb1e6ebbc74}{set\+Velocity}} (Ogre\+::\+Vector2 vel)
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a96fb64cae2361d8a64b4abafd823008c}{set\+Position}} (Ogre\+::\+Vector3 position)
+\item 
+virtual Ogre\+::\+Vector2 \mbox{\hyperlink{class_game_object_ab6a3259e42f7daa8b9f73bf4da51042e}{get\+Position}} () const
+\item 
+\mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{class_game_object_aa5f10650ee2a5bef523eb889cc6bd0ba}{get\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_game_object_aa70d16c35f13ee08232f11aea03ca77d}{set\+Type}} (\mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} obj\+Type)
+\item 
+Ogre\+::\+Axis\+Aligned\+Box \mbox{\hyperlink{class_game_object_a5f1c1022d1f86d426e27e9ff65dacb32}{get\+Axis\+Aligned\+Box}} () const
+\item 
+void \mbox{\hyperlink{class_game_object_acdfbf5333b9f0ec4ca7f58922b79a0b9}{set\+Axis\+Aligned\+Box}} (Ogre\+::\+Axis\+Aligned\+Box)
+\item 
+bool \mbox{\hyperlink{class_game_object_a8c54dbc7dffeea9193b9a83830104639}{Is\+Object\+Colliding}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{class_game_object_a280ab05ffa48cf4d328565f079162e50}{type}}
+\item 
+Ogre\+::\+Axis\+Aligned\+Box \mbox{\hyperlink{class_game_object_a8a4de5c4dfff5d954b24cbefee3a002f}{bounding\+Box}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}\label{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}} 
+\index{GameObject@{GameObject}!````~GameObject@{$\sim$GameObject}}
+\index{````~GameObject@{$\sim$GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameObject()}{~GameObject()}}
+{\footnotesize\ttfamily Game\+Object\+::$\sim$\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_object_a5f1c1022d1f86d426e27e9ff65dacb32}\label{class_game_object_a5f1c1022d1f86d426e27e9ff65dacb32}} 
+\index{GameObject@{GameObject}!getAxisAlignedBox@{getAxisAlignedBox}}
+\index{getAxisAlignedBox@{getAxisAlignedBox}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getAxisAlignedBox()}{getAxisAlignedBox()}}
+{\footnotesize\ttfamily Ogre\+::\+Axis\+Aligned\+Box Game\+Object\+::get\+Axis\+Aligned\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_game_object_ab6a3259e42f7daa8b9f73bf4da51042e}\label{class_game_object_ab6a3259e42f7daa8b9f73bf4da51042e}} 
+\index{GameObject@{GameObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily Ogre\+::\+Vector2 Game\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doodle_a397c527eec00294058fd2ad56c28458c}{Doodle}}, and \mbox{\hyperlink{class_platform_acfb51f627fec8a4f5dcd8445a073bd77}{Platform}}.
+
+\mbox{\Hypertarget{class_game_object_aa5f10650ee2a5bef523eb889cc6bd0ba}\label{class_game_object_aa5f10650ee2a5bef523eb889cc6bd0ba}} 
+\index{GameObject@{GameObject}!getType@{getType}}
+\index{getType@{getType}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Game\+Object\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_game_object_a8c54dbc7dffeea9193b9a83830104639}\label{class_game_object_a8c54dbc7dffeea9193b9a83830104639}} 
+\index{GameObject@{GameObject}!IsObjectColliding@{IsObjectColliding}}
+\index{IsObjectColliding@{IsObjectColliding}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{IsObjectColliding()}{IsObjectColliding()}}
+{\footnotesize\ttfamily bool Game\+Object\+::\+Is\+Object\+Colliding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_object_acdfbf5333b9f0ec4ca7f58922b79a0b9}\label{class_game_object_acdfbf5333b9f0ec4ca7f58922b79a0b9}} 
+\index{GameObject@{GameObject}!setAxisAlignedBox@{setAxisAlignedBox}}
+\index{setAxisAlignedBox@{setAxisAlignedBox}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setAxisAlignedBox()}{setAxisAlignedBox()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Axis\+Aligned\+Box (\begin{DoxyParamCaption}\item[{Ogre\+::\+Axis\+Aligned\+Box}]{box }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_object_a96fb64cae2361d8a64b4abafd823008c}\label{class_game_object_a96fb64cae2361d8a64b4abafd823008c}} 
+\index{GameObject@{GameObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{Ogre\+::\+Vector3}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doodle_a946af37058b3c3842ccb6fe36c058baf}{Doodle}}, and \mbox{\hyperlink{class_platform_a690f60d7d69e7e61cf1bef7dbe149402}{Platform}}.
+
+\mbox{\Hypertarget{class_game_object_aa70d16c35f13ee08232f11aea03ca77d}\label{class_game_object_aa70d16c35f13ee08232f11aea03ca77d}} 
+\index{GameObject@{GameObject}!setType@{setType}}
+\index{setType@{setType}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}}}]{obj\+Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_object_afbf626795852f40b5ec19fb1e6ebbc74}\label{class_game_object_afbf626795852f40b5ec19fb1e6ebbc74}} 
+\index{GameObject@{GameObject}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Velocity (\begin{DoxyParamCaption}\item[{Ogre\+::\+Vector2}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doodle_aee68058539b4efc09ac833f7e483af33}{Doodle}}, and \mbox{\hyperlink{class_platform_aba8551ce3cd1198b1e669f38d4638d74}{Platform}}.
+
+\mbox{\Hypertarget{class_game_object_a2fece397b6343682d639f8943f124d0e}\label{class_game_object_a2fece397b6343682d639f8943f124d0e}} 
+\index{GameObject@{GameObject}!update@{update}}
+\index{update@{update}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+Object\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doodle_a870615d7eceedbfaaf3bf56e3672bc5e}{Doodle}}, and \mbox{\hyperlink{class_platform_a8ff7c9d7ab2ed9346ba08b9c7e448d24}{Platform}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_object_a8a4de5c4dfff5d954b24cbefee3a002f}\label{class_game_object_a8a4de5c4dfff5d954b24cbefee3a002f}} 
+\index{GameObject@{GameObject}!boundingBox@{boundingBox}}
+\index{boundingBox@{boundingBox}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{boundingBox}{boundingBox}}
+{\footnotesize\ttfamily Ogre\+::\+Axis\+Aligned\+Box Game\+Object\+::bounding\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_object_a280ab05ffa48cf4d328565f079162e50}\label{class_game_object_a280ab05ffa48cf4d328565f079162e50}} 
+\index{GameObject@{GameObject}!type@{type}}
+\index{type@{type}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Game\+Object\+::type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_game_object_8cpp}{Game\+Object.\+cpp}}\end{DoxyCompactItemize}

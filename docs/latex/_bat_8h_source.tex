@@ -1,0 +1,47 @@
+\hypertarget{_bat_8h_source}{}\doxysection{Bat.\+h}
+\label{_bat_8h_source}\index{C:/Users/Demon/OneDrive/Documents/GitHub/GAME3121\_Assignment2/GAME3121\_A2\_BlakeLiam/OrgreTemplateV2/Bat.h@{C:/Users/Demon/OneDrive/Documents/GitHub/GAME3121\_Assignment2/GAME3121\_A2\_BlakeLiam/OrgreTemplateV2/Bat.h}}
+\mbox{\hyperlink{_bat_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Ogre.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}OgreApplicationContext.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}OgreInput.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}OgreRTShaderSystem.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}OgreTrays.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_platform}{Platform}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_platform_afe5da1f6a7420e020a602086f9b580b9}{m\_gravity}} = 0.f;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20     Ogre::SceneNode* \mbox{\hyperlink{class_platform_a9b71a786e1e7d80915889424aa6c6ec5}{batShape}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{25     Ogre::Vector2 \mbox{\hyperlink{class_platform_a8ed813443021eeee99ac9ccab0509c22}{velocity}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     Ogre::Vector2 \mbox{\hyperlink{class_platform_a190e56a7e74283f4a100cbfd262466fd}{position}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39     \mbox{\hyperlink{class_platform_a52028ea2984cbfdf8e9f42ee87f66cfe}{Platform}}(Ogre::Entity* ballEntity, Ogre::SceneManager* scnMgr, \textcolor{keywordtype}{bool} useGravity, \textcolor{keywordtype}{float} grav);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \mbox{\hyperlink{class_platform_a52028ea2984cbfdf8e9f42ee87f66cfe}{Platform}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \mbox{\hyperlink{class_platform_a13b5e4ef946b8a2fe38d22014145ab68}{\string~Platform}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57     Ogre::Vector2 \mbox{\hyperlink{class_platform_acfb51f627fec8a4f5dcd8445a073bd77}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     Ogre::SceneNode* \mbox{\hyperlink{class_platform_a0fe4cf44056d1924075a3afe4b518db1}{getShape}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{69     Ogre::Vector2 \mbox{\hyperlink{class_platform_a08b5c95a049d1276282ff2a522730ba6}{getVelocity}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_platform_a690f60d7d69e7e61cf1bef7dbe149402}{setPosition}}(Ogre::Vector3 \mbox{\hyperlink{class_platform_a190e56a7e74283f4a100cbfd262466fd}{position}});}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_platform_aba8551ce3cd1198b1e669f38d4638d74}{setVelocity}}(Ogre::Vector2 vel);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_platform_a8ff7c9d7ab2ed9346ba08b9c7e448d24}{update}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{89 \};}
+
+\end{DoxyCode}

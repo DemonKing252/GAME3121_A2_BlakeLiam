@@ -1,0 +1,60 @@
+\hypertarget{_ball_8h_source}{}\doxysection{Ball.\+h}
+\label{_ball_8h_source}\index{C:/Users/Demon/OneDrive/Documents/GitHub/GAME3121\_Assignment2/GAME3121\_A2\_BlakeLiam/OrgreTemplateV2/Ball.h@{C:/Users/Demon/OneDrive/Documents/GitHub/GAME3121\_Assignment2/GAME3121\_A2\_BlakeLiam/OrgreTemplateV2/Ball.h}}
+\mbox{\hyperlink{_ball_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Ogre.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}OgreApplicationContext.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}OgreInput.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}OgreRTShaderSystem.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}OgreTrays.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}} }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_doodle}{Doodle}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     }
+\DoxyCodeLine{20     Ogre::SceneNode* \mbox{\hyperlink{class_doodle_aafc9f361fc3c5bc6acfb8f02a1bf2056}{ballShape}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{25     Ogre::Vector2 \mbox{\hyperlink{class_doodle_ae8d551ac82a8fa38bc4da4199f934ac9}{velocity}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     Ogre::Vector2 \mbox{\hyperlink{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}{position}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_doodle_a741cdaf41205ab345868f053750d3815}{m\_gravity}} = 0.f;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41     \mbox{\hyperlink{class_doodle_a48b2ce4e023051bdbda64fda966c621f}{Doodle}}(Ogre::Entity* ballEntity, Ogre::SceneManager* scnMgr, \textcolor{keywordtype}{bool} useGravity = \textcolor{keyword}{true}, \textcolor{keywordtype}{float} grav = 9.8f);}
+\DoxyCodeLine{42     }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47     \mbox{\hyperlink{class_doodle_a48b2ce4e023051bdbda64fda966c621f}{Doodle}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{52     \mbox{\hyperlink{class_doodle_a2f77f21d85c97d0ab7f7c569e05229fc}{\string~Doodle}}();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     Ogre::Vector2 \mbox{\hyperlink{class_doodle_a397c527eec00294058fd2ad56c28458c}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     Ogre::SceneNode* \mbox{\hyperlink{class_doodle_a691312e503baaea4f1e71a1988d3a94c}{getShape}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     Ogre::Vector2 \mbox{\hyperlink{class_doodle_a07e3ada49b83a9bbeed4d668d96ae268}{getVelocity}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a946af37058b3c3842ccb6fe36c058baf}{setPosition}}(Ogre::Vector3 \mbox{\hyperlink{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}{position}});}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_aee68058539b4efc09ac833f7e483af33}{setVelocity}}(Ogre::Vector2 vel);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a870615d7eceedbfaaf3bf56e3672bc5e}{update}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_aafa5c36cbebca1797868856038227261}{checkBounds}}(\mbox{\hyperlink{class_game_object}{GameObject}}* go);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a91e4fa50f86c4dd7e962a0fbdb5ff3ca}{reset}}();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \};}
+\DoxyCodeLine{114 }
+
+\end{DoxyCode}

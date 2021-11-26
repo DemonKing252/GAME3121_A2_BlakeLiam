@@ -1,0 +1,326 @@
+\hypertarget{class_doodle}{}\doxysection{Doodle Class Reference}
+\label{class_doodle}\index{Doodle@{Doodle}}
+
+
+Pong Ball.  
+
+
+
+
+{\ttfamily \#include $<$Ball.\+h$>$}
+
+Inheritance diagram for Doodle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doodle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doodle_ad58bab30e6371d862dbdfb368b5140ec}{Doodle}} (Ogre\+::\+Entity $\ast$ball\+Entity, Ogre\+::\+Scene\+Manager $\ast$scn\+Mgr, bool use\+Gravity=true, float grav=9.\+8f)
+\begin{DoxyCompactList}\small\item\em Constructor for the ball class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_doodle_a48b2ce4e023051bdbda64fda966c621f}{Doodle}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_doodle_a2f77f21d85c97d0ab7f7c569e05229fc}{$\sim$\+Doodle}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Ogre\+::\+Vector2 \mbox{\hyperlink{class_doodle_a397c527eec00294058fd2ad56c28458c}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the ball. \end{DoxyCompactList}\item 
+Ogre\+::\+Scene\+Node $\ast$ \mbox{\hyperlink{class_doodle_a691312e503baaea4f1e71a1988d3a94c}{get\+Shape}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ball shape. \end{DoxyCompactList}\item 
+Ogre\+::\+Vector2 \mbox{\hyperlink{class_doodle_a07e3ada49b83a9bbeed4d668d96ae268}{get\+Velocity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ball velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doodle_a946af37058b3c3842ccb6fe36c058baf}{set\+Position}} (Ogre\+::\+Vector3 \mbox{\hyperlink{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}{position}})
+\begin{DoxyCompactList}\small\item\em Set ball position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doodle_aee68058539b4efc09ac833f7e483af33}{set\+Velocity}} (Ogre\+::\+Vector2 vel)
+\begin{DoxyCompactList}\small\item\em Set ball velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doodle_a870615d7eceedbfaaf3bf56e3672bc5e}{update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Called once per tick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doodle_aafa5c36cbebca1797868856038227261}{check\+Bounds}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$go)
+\begin{DoxyCompactList}\small\item\em checkbounds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doodle_a91e4fa50f86c4dd7e962a0fbdb5ff3ca}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ogre\+::\+Scene\+Node $\ast$ \mbox{\hyperlink{class_doodle_aafc9f361fc3c5bc6acfb8f02a1bf2056}{ball\+Shape}}
+\begin{DoxyCompactList}\small\item\em (ball\+Shape) Prefab type sphere to represent the main ball \end{DoxyCompactList}\item 
+Ogre\+::\+Vector2 \mbox{\hyperlink{class_doodle_ae8d551ac82a8fa38bc4da4199f934ac9}{velocity}}
+\begin{DoxyCompactList}\small\item\em (velocity) Current velocity of the bat \end{DoxyCompactList}\item 
+Ogre\+::\+Vector2 \mbox{\hyperlink{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}{position}}
+\begin{DoxyCompactList}\small\item\em (position) Current position of the bat \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_doodle_a741cdaf41205ab345868f053750d3815}{m\+\_\+gravity}} = 0.f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pong Ball. 
+
+A class which manages the behaviour of the pong ball. ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doodle_ad58bab30e6371d862dbdfb368b5140ec}\label{class_doodle_ad58bab30e6371d862dbdfb368b5140ec}} 
+\index{Doodle@{Doodle}!Doodle@{Doodle}}
+\index{Doodle@{Doodle}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{Doodle()}{Doodle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Doodle\+::\+Doodle (\begin{DoxyParamCaption}\item[{Ogre\+::\+Entity $\ast$}]{ball\+Entity,  }\item[{Ogre\+::\+Scene\+Manager $\ast$}]{scn\+Mgr,  }\item[{bool}]{use\+Gravity = {\ttfamily true},  }\item[{float}]{grav = {\ttfamily 9.8f} }\end{DoxyParamCaption})}
+
+
+
+Constructor for the ball class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball\+Entity} & A refrence to the entity you want to use \\
+\hline
+{\em scn\+Mgr} & A refrence to the scene managerwhat \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Assignment1\+::setup() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_doodle_a48b2ce4e023051bdbda64fda966c621f}\label{class_doodle_a48b2ce4e023051bdbda64fda966c621f}} 
+\index{Doodle@{Doodle}!Doodle@{Doodle}}
+\index{Doodle@{Doodle}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{Doodle()}{Doodle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Doodle\+::\+Doodle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doodle_a2f77f21d85c97d0ab7f7c569e05229fc}\label{class_doodle_a2f77f21d85c97d0ab7f7c569e05229fc}} 
+\index{Doodle@{Doodle}!````~Doodle@{$\sim$Doodle}}
+\index{````~Doodle@{$\sim$Doodle}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{$\sim$Doodle()}{~Doodle()}}
+{\footnotesize\ttfamily Doodle\+::$\sim$\+Doodle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doodle_aafa5c36cbebca1797868856038227261}\label{class_doodle_aafa5c36cbebca1797868856038227261}} 
+\index{Doodle@{Doodle}!checkBounds@{checkBounds}}
+\index{checkBounds@{checkBounds}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{checkBounds()}{checkBounds()}}
+{\footnotesize\ttfamily void Doodle\+::check\+Bounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$}]{go }\end{DoxyParamCaption})}
+
+
+
+checkbounds 
+
+performs an AABB collision test and deflects ball velocity accordingly \begin{DoxySeeAlso}{See also}
+Ball\+::set\+Velocity(\+Ogre\+::\+Vector2 vel) this method is what gets called after a direction is determined 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em (dt)} & time elapsed since previous frame (consider using a frame listener to get delta time!) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doodle_a397c527eec00294058fd2ad56c28458c}\label{class_doodle_a397c527eec00294058fd2ad56c28458c}} 
+\index{Doodle@{Doodle}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily Ogre\+::\+Vector2 Doodle\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the position of the ball. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the position as an Ogre\+::\+Vector2 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_object_ab6a3259e42f7daa8b9f73bf4da51042e}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_doodle_a691312e503baaea4f1e71a1988d3a94c}\label{class_doodle_a691312e503baaea4f1e71a1988d3a94c}} 
+\index{Doodle@{Doodle}!getShape@{getShape}}
+\index{getShape@{getShape}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{getShape()}{getShape()}}
+{\footnotesize\ttfamily Ogre\+::\+Scene\+Node $\ast$ Doodle\+::get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the ball shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the shape as a Ogre\+::\+Scene\+Node reference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doodle_a07e3ada49b83a9bbeed4d668d96ae268}\label{class_doodle_a07e3ada49b83a9bbeed4d668d96ae268}} 
+\index{Doodle@{Doodle}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily Ogre\+::\+Vector2 Doodle\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the ball velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the velocity of the ball as an Ogre\+::\+Vector2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doodle_a91e4fa50f86c4dd7e962a0fbdb5ff3ca}\label{class_doodle_a91e4fa50f86c4dd7e962a0fbdb5ff3ca}} 
+\index{Doodle@{Doodle}!reset@{reset}}
+\index{reset@{reset}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Doodle\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reset 
+
+this method is called the moment the ball leaves the boundary. The balls velocity is set to be a random diagonal direction (that is either (1, 1)/(1, -\/1)/(-\/1,1)/(-\/1,-\/1) 
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doodle_a946af37058b3c3842ccb6fe36c058baf}\label{class_doodle_a946af37058b3c3842ccb6fe36c058baf}} 
+\index{Doodle@{Doodle}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Doodle\+::set\+Position (\begin{DoxyParamCaption}\item[{Ogre\+::\+Vector3}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set ball position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (position)} & desired position to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_object_a96fb64cae2361d8a64b4abafd823008c}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_doodle_aee68058539b4efc09ac833f7e483af33}\label{class_doodle_aee68058539b4efc09ac833f7e483af33}} 
+\index{Doodle@{Doodle}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily void Doodle\+::set\+Velocity (\begin{DoxyParamCaption}\item[{Ogre\+::\+Vector2}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set ball velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (vel)} & Velocity to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_object_afbf626795852f40b5ec19fb1e6ebbc74}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_doodle_a870615d7eceedbfaaf3bf56e3672bc5e}\label{class_doodle_a870615d7eceedbfaaf3bf56e3672bc5e}} 
+\index{Doodle@{Doodle}!update@{update}}
+\index{update@{update}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Doodle\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called once per tick. 
+
+called in game class \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_game_af4a6a232da68068e26aa9e6ab802ebf1}{Game\+::frame\+Rendering\+Queued(const Frame\+Event\& evt)}} to see where this is called from 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em (dt)} & time elapsed since previous frame (consider using a frame listener to get delta time!) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_object_a2fece397b6343682d639f8943f124d0e}{Game\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_doodle_aafc9f361fc3c5bc6acfb8f02a1bf2056}\label{class_doodle_aafc9f361fc3c5bc6acfb8f02a1bf2056}} 
+\index{Doodle@{Doodle}!ballShape@{ballShape}}
+\index{ballShape@{ballShape}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{ballShape}{ballShape}}
+{\footnotesize\ttfamily Ogre\+::\+Scene\+Node$\ast$ Doodle\+::ball\+Shape\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(ball\+Shape) Prefab type sphere to represent the main ball 
+
+\mbox{\Hypertarget{class_doodle_a741cdaf41205ab345868f053750d3815}\label{class_doodle_a741cdaf41205ab345868f053750d3815}} 
+\index{Doodle@{Doodle}!m\_gravity@{m\_gravity}}
+\index{m\_gravity@{m\_gravity}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{m\_gravity}{m\_gravity}}
+{\footnotesize\ttfamily float Doodle\+::m\+\_\+gravity = 0.f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}\label{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}} 
+\index{Doodle@{Doodle}!position@{position}}
+\index{position@{position}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily Ogre\+::\+Vector2 Doodle\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(position) Current position of the bat 
+
+\mbox{\Hypertarget{class_doodle_ae8d551ac82a8fa38bc4da4199f934ac9}\label{class_doodle_ae8d551ac82a8fa38bc4da4199f934ac9}} 
+\index{Doodle@{Doodle}!velocity@{velocity}}
+\index{velocity@{velocity}!Doodle@{Doodle}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily Ogre\+::\+Vector2 Doodle\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(velocity) Current velocity of the bat 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_ball_8h}{Ball.\+h}}\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_ball_8cpp}{Ball.\+cpp}}\end{DoxyCompactItemize}

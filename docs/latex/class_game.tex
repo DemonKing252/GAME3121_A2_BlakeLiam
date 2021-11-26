@@ -1,0 +1,552 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+\mbox{\hyperlink{class_game}{Game}} class.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_game_ad5f541514e0ffdcdc94d527f6ebacc75}{Mesh\+Type}} \{ \mbox{\hyperlink{class_game_ad5f541514e0ffdcdc94d527f6ebacc75aa296104f0c61a9cf39f4824d05315e12}{Cube}}
+, \mbox{\hyperlink{class_game_ad5f541514e0ffdcdc94d527f6ebacc75a0d3adee051531c15b3509b4d4d75ce7b}{Plane}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_game_a72772b628443c3675976d6b5e6c9ec2a}{$\sim$\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Virtual Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ae4618ba40eabbbe65e35f1bb239aa29b}{setup}} ()
+\begin{DoxyCompactList}\small\item\em called when the game is constructed \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a2ba00c3475d222573e5ad54b88b389b7}{key\+Pressed}} (const Keyboard\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em called when a key is pressed \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a495b7d5ab243a04b0c5fc5e28c4f73b4}{key\+Released}} (const Keyboard\+Event \&evt)
+\item 
+bool \mbox{\hyperlink{class_game_af4a6a232da68068e26aa9e6ab802ebf1}{frame\+Rendering\+Queued}} (const Frame\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em called once per tick \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a3f8b551a1a7d92fb19ddeb9674919a74}{refresh\+User\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em refresh all Labels \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a36b9393a1cc0ae239d2c897f7caa3227}{mouse\+Moved}} (const Mouse\+Motion\+Event \&evt) override
+\begin{DoxyCompactList}\small\item\em called when the mouse is moved \end{DoxyCompactList}\item 
+Manual\+Object $\ast$ \mbox{\hyperlink{class_game_abc88a7ba66e01dfcfcd67e6695bb1b6c}{create\+Mesh}} (\mbox{\hyperlink{class_game_ad5f541514e0ffdcdc94d527f6ebacc75}{Mesh\+Type}} mesh\+Type, const char $\ast$name, const char $\ast$mat\+Name, Ogre\+::\+Vector2 uv\+Map)
+\item 
+void \mbox{\hyperlink{class_game_a00d3eacbfeecbc48f1cf3cec8045bb40}{add\+Vertex}} (Manual\+Object $\ast$mesh\+Ref, Ogre\+::\+Vector3 pos, Ogre\+::\+Vector3 col, Ogre\+::\+Vector2 uv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ogre\+Bites\+::\+Tray\+Listener \mbox{\hyperlink{class_game_af34a45d1eceabfba4403b64d45876348}{my\+Tray\+Listener}}
+\begin{DoxyCompactList}\small\item\em Tray listener used for GUI. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_game_a981ce8cda0585e85f4047a57ba29ad4b}{m\+\_\+score\+Label}}
+\begin{DoxyCompactList}\small\item\em Graphic User Interface label used as score. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_game_aaef85398a3a78f6ecca4021e5e775326}{m\+\_\+lives\+Label}}
+\begin{DoxyCompactList}\small\item\em Graphic User Interface label used as lives. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_game_aa833da943e0bdc43023e27faea9c03b4}{m\+\_\+fps\+Label}}
+\begin{DoxyCompactList}\small\item\em Graphic User Interface label used as lives. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_game_ac280e6f5ffa9ffac1afcc4a8a391eb8f}{m\+\_\+mspf\+Label}}
+\begin{DoxyCompactList}\small\item\em Graphic User Interface label used as the framerate. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_game_a6953aa8d5e14f717c32271d6b1ef36d2}{m\+\_\+my\+Label}}
+\begin{DoxyCompactList}\small\item\em Graphic User Interface label used as milliseconds per frame. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_game_a050565826e96098323e6dbba91d1fc02}{m\+\_\+game\+Over\+Label}}
+\begin{DoxyCompactList}\small\item\em Graphic User Interface label used as the engine header. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Tray\+Manager $\ast$ \mbox{\hyperlink{class_game_a4df3c171d63dd990ec0460891dab422d}{m\+Tray\+Mgr}}
+\begin{DoxyCompactList}\small\item\em Graphic User Interface label used when you lose all lives. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Button $\ast$ \mbox{\hyperlink{class_game_a2072a1336b65b1ffbb33bf21c42f03e1}{m\+\_\+quit\+Btn}} = nullptr
+\begin{DoxyCompactList}\small\item\em Graphic User Interface button used to quit the game if you lose the game. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_game_a94cf712267d1cf770dff92dbe5a4c11d}{m\+\_\+doodle}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ $>$ \mbox{\hyperlink{class_game_a2f818284846cdd8af4f201ffaa2fc152}{m\+\_\+platforms}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_game_ad28961d6ad5f6ca5d25b3646d485a9b8}{aspectX}} = 325.\+0f
+\begin{DoxyCompactList}\small\item\em A reference to the ball. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_adcf809946362e8483251d326850493ac}{aspectY}} = 243.\+0f
+\begin{DoxyCompactList}\small\item\em aspect ratio y \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_afaf9404196df9968103d5b0d0ad08139}{score}} = 0
+\begin{DoxyCompactList}\small\item\em game score \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_aa65dc796ac407c6e5ffaab155530c90a}{lives}} = 5
+\begin{DoxyCompactList}\small\item\em lives counter \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_aa667a944bcf38a807f0c8dd5adc96a34}{numofframes}} = 0
+\begin{DoxyCompactList}\small\item\em counter used to refresh fps ui \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_a3985a7458932546918ec2e9560c332a3}{timesincelastframe}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em time passed since last frame fps was updated \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_a4109336118f5a332b1b56d17274d6ba5}{latestframerate}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em framerate last recorded \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_a0678b125f08cc18bb748dc90a0eed9c4}{m\+\_\+refresh\+Time}} = 0.\+02f
+\begin{DoxyCompactList}\small\item\em how often to refresh the frame rate ui \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_game_ad46cc58e640c32bb6438f140c5903fab}{buffer}} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em character stream for setting the captions for all GUI elements (see the various Labels used in \mbox{\hyperlink{class_game}{Game}} class) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_aad66e2f44bebad41743ea8f44a8778a5}{gameover}} = false
+\begin{DoxyCompactList}\small\item\em set to true when the ball first collides with the paddle \end{DoxyCompactList}\item 
+Scene\+Manager $\ast$ \mbox{\hyperlink{class_game_adec79e7e26247ccdf0556137e540ac58}{scn\+Mgr}}
+\item 
+Root $\ast$ \mbox{\hyperlink{class_game_aacecda78ea5b9e76eaf53f511addd514}{root}}
+\item 
+Ogre\+::\+Vector2 \mbox{\hyperlink{class_game_a28ccd7e623832c0954e2f239dc722b57}{vel}}
+\item 
+Scene\+Node $\ast$ \mbox{\hyperlink{class_game_a37cab82ace5f0b4fe02c784dc93564bd}{cam\+Node}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_game}{Game}} class. 
+
+Main base class, inherits from Application Listener and Input Listener. Any type of keyboard/mouse event based entities should be done from here \begin{DoxySeeAlso}{See also}
+Bat 
+
+Ball 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_game_ad5f541514e0ffdcdc94d527f6ebacc75}\label{class_game_ad5f541514e0ffdcdc94d527f6ebacc75}} 
+\index{Game@{Game}!MeshType@{MeshType}}
+\index{MeshType@{MeshType}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{MeshType}{MeshType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_game_ad5f541514e0ffdcdc94d527f6ebacc75}{Game\+::\+Mesh\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cube@{Cube}!Game@{Game}}\index{Game@{Game}!Cube@{Cube}}}\mbox{\Hypertarget{class_game_ad5f541514e0ffdcdc94d527f6ebacc75aa296104f0c61a9cf39f4824d05315e12}\label{class_game_ad5f541514e0ffdcdc94d527f6ebacc75aa296104f0c61a9cf39f4824d05315e12}} 
+Cube&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Plane@{Plane}!Game@{Game}}\index{Game@{Game}!Plane@{Plane}}}\mbox{\Hypertarget{class_game_ad5f541514e0ffdcdc94d527f6ebacc75a0d3adee051531c15b3509b4d4d75ce7b}\label{class_game_ad5f541514e0ffdcdc94d527f6ebacc75a0d3adee051531c15b3509b4d4d75ce7b}} 
+Plane&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+called in \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \mbox{\Hypertarget{class_game_a72772b628443c3675976d6b5e6c9ec2a}\label{class_game_a72772b628443c3675976d6b5e6c9ec2a}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily virtual Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual Destructor. 
+
+called after application quits 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a00d3eacbfeecbc48f1cf3cec8045bb40}\label{class_game_a00d3eacbfeecbc48f1cf3cec8045bb40}} 
+\index{Game@{Game}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}}
+{\footnotesize\ttfamily void Game\+::add\+Vertex (\begin{DoxyParamCaption}\item[{Manual\+Object $\ast$}]{mesh\+Ref,  }\item[{Ogre\+::\+Vector3}]{pos,  }\item[{Ogre\+::\+Vector3}]{col,  }\item[{Ogre\+::\+Vector2}]{uv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_abc88a7ba66e01dfcfcd67e6695bb1b6c}\label{class_game_abc88a7ba66e01dfcfcd67e6695bb1b6c}} 
+\index{Game@{Game}!createMesh@{createMesh}}
+\index{createMesh@{createMesh}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{createMesh()}{createMesh()}}
+{\footnotesize\ttfamily Manual\+Object $\ast$ Game\+::create\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_ad5f541514e0ffdcdc94d527f6ebacc75}{Mesh\+Type}}}]{mesh\+Type,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{mat\+Name,  }\item[{Ogre\+::\+Vector2}]{uv\+Map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_af4a6a232da68068e26aa9e6ab802ebf1}\label{class_game_af4a6a232da68068e26aa9e6ab802ebf1}} 
+\index{Game@{Game}!frameRenderingQueued@{frameRenderingQueued}}
+\index{frameRenderingQueued@{frameRenderingQueued}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{frameRenderingQueued()}{frameRenderingQueued()}}
+{\footnotesize\ttfamily bool Game\+::frame\+Rendering\+Queued (\begin{DoxyParamCaption}\item[{const Frame\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+
+
+called once per tick 
+
+\begin{DoxyReturn}{Returns}
+boolean always true 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & reference to frame event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a2ba00c3475d222573e5ad54b88b389b7}\label{class_game_a2ba00c3475d222573e5ad54b88b389b7}} 
+\index{Game@{Game}!keyPressed@{keyPressed}}
+\index{keyPressed@{keyPressed}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{keyPressed()}{keyPressed()}}
+{\footnotesize\ttfamily bool Game\+::key\+Pressed (\begin{DoxyParamCaption}\item[{const Keyboard\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+
+
+called when a key is pressed 
+
+\begin{DoxyReturn}{Returns}
+boolean always true 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & reference to keyboard event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a495b7d5ab243a04b0c5fc5e28c4f73b4}\label{class_game_a495b7d5ab243a04b0c5fc5e28c4f73b4}} 
+\index{Game@{Game}!keyReleased@{keyReleased}}
+\index{keyReleased@{keyReleased}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{keyReleased()}{keyReleased()}}
+{\footnotesize\ttfamily bool Game\+::key\+Released (\begin{DoxyParamCaption}\item[{const Keyboard\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_a36b9393a1cc0ae239d2c897f7caa3227}\label{class_game_a36b9393a1cc0ae239d2c897f7caa3227}} 
+\index{Game@{Game}!mouseMoved@{mouseMoved}}
+\index{mouseMoved@{mouseMoved}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{mouseMoved()}{mouseMoved()}}
+{\footnotesize\ttfamily bool Game\+::mouse\+Moved (\begin{DoxyParamCaption}\item[{const Mouse\+Motion\+Event \&}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+called when the mouse is moved 
+
+\begin{DoxyReturn}{Returns}
+boolean always true 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & a reference to mouse motion event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a3f8b551a1a7d92fb19ddeb9674919a74}\label{class_game_a3f8b551a1a7d92fb19ddeb9674919a74}} 
+\index{Game@{Game}!refreshUserInterface@{refreshUserInterface}}
+\index{refreshUserInterface@{refreshUserInterface}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{refreshUserInterface()}{refreshUserInterface()}}
+{\footnotesize\ttfamily void Game\+::refresh\+User\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+refresh all Labels 
+
+\begin{DoxyWarning}{Warning}
+Labels are expensive, don\textquotesingle{}t call this function when not needed! 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_ae4618ba40eabbbe65e35f1bb239aa29b}\label{class_game_ae4618ba40eabbbe65e35f1bb239aa29b}} 
+\index{Game@{Game}!setup@{setup}}
+\index{setup@{setup}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Game\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+called when the game is constructed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\mbox{[}turnlights\mbox{]}
+
+\mbox{[}turnlights\mbox{]}
+
+\mbox{[}newlight\mbox{]}
+
+\mbox{[}newlight\mbox{]}
+
+\mbox{[}lightpos\mbox{]}
+
+\mbox{[}lightpos\mbox{]}
+
+\mbox{[}camera\mbox{]}
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_ad28961d6ad5f6ca5d25b3646d485a9b8}\label{class_game_ad28961d6ad5f6ca5d25b3646d485a9b8}} 
+\index{Game@{Game}!aspectX@{aspectX}}
+\index{aspectX@{aspectX}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{aspectX}{aspectX}}
+{\footnotesize\ttfamily float Game\+::aspectX = 325.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A reference to the ball. 
+
+\begin{DoxySeeAlso}{See also}
+Bat
+\end{DoxySeeAlso}
+aspect ratio x \begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_adcf809946362e8483251d326850493ac}\label{class_game_adcf809946362e8483251d326850493ac}} 
+\index{Game@{Game}!aspectY@{aspectY}}
+\index{aspectY@{aspectY}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{aspectY}{aspectY}}
+{\footnotesize\ttfamily float Game\+::aspectY = 243.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+aspect ratio y 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_ad46cc58e640c32bb6438f140c5903fab}\label{class_game_ad46cc58e640c32bb6438f140c5903fab}} 
+\index{Game@{Game}!buffer@{buffer}}
+\index{buffer@{buffer}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char Game\+::buffer\mbox{[}50\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+character stream for setting the captions for all GUI elements (see the various Labels used in \mbox{\hyperlink{class_game}{Game}} class) 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_a37cab82ace5f0b4fe02c784dc93564bd}\label{class_game_a37cab82ace5f0b4fe02c784dc93564bd}} 
+\index{Game@{Game}!camNode@{camNode}}
+\index{camNode@{camNode}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{camNode}{camNode}}
+{\footnotesize\ttfamily Scene\+Node$\ast$ Game\+::cam\+Node\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_aad66e2f44bebad41743ea8f44a8778a5}\label{class_game_aad66e2f44bebad41743ea8f44a8778a5}} 
+\index{Game@{Game}!gameover@{gameover}}
+\index{gameover@{gameover}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{gameover}{gameover}}
+{\footnotesize\ttfamily bool Game\+::gameover = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set to true when the ball first collides with the paddle 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for
+\end{DoxyNote}
+set to true when you lose all lives \begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_a4109336118f5a332b1b56d17274d6ba5}\label{class_game_a4109336118f5a332b1b56d17274d6ba5}} 
+\index{Game@{Game}!latestframerate@{latestframerate}}
+\index{latestframerate@{latestframerate}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{latestframerate}{latestframerate}}
+{\footnotesize\ttfamily float Game\+::latestframerate = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+framerate last recorded 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_aa65dc796ac407c6e5ffaab155530c90a}\label{class_game_aa65dc796ac407c6e5ffaab155530c90a}} 
+\index{Game@{Game}!lives@{lives}}
+\index{lives@{lives}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{lives}{lives}}
+{\footnotesize\ttfamily int Game\+::lives = 5\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+lives counter 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_a94cf712267d1cf770dff92dbe5a4c11d}\label{class_game_a94cf712267d1cf770dff92dbe5a4c11d}} 
+\index{Game@{Game}!m\_doodle@{m\_doodle}}
+\index{m\_doodle@{m\_doodle}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_doodle}{m\_doodle}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}$>$ Game\+::m\+\_\+doodle}
+
+\mbox{\Hypertarget{class_game_aa833da943e0bdc43023e27faea9c03b4}\label{class_game_aa833da943e0bdc43023e27faea9c03b4}} 
+\index{Game@{Game}!m\_fpsLabel@{m\_fpsLabel}}
+\index{m\_fpsLabel@{m\_fpsLabel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_fpsLabel}{m\_fpsLabel}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label$\ast$ Game\+::m\+\_\+fps\+Label}
+
+
+
+Graphic User Interface label used as lives. 
+
+\mbox{\Hypertarget{class_game_a050565826e96098323e6dbba91d1fc02}\label{class_game_a050565826e96098323e6dbba91d1fc02}} 
+\index{Game@{Game}!m\_gameOverLabel@{m\_gameOverLabel}}
+\index{m\_gameOverLabel@{m\_gameOverLabel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_gameOverLabel}{m\_gameOverLabel}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label$\ast$ Game\+::m\+\_\+game\+Over\+Label}
+
+
+
+Graphic User Interface label used as the engine header. 
+
+\mbox{\Hypertarget{class_game_aaef85398a3a78f6ecca4021e5e775326}\label{class_game_aaef85398a3a78f6ecca4021e5e775326}} 
+\index{Game@{Game}!m\_livesLabel@{m\_livesLabel}}
+\index{m\_livesLabel@{m\_livesLabel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_livesLabel}{m\_livesLabel}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label$\ast$ Game\+::m\+\_\+lives\+Label}
+
+
+
+Graphic User Interface label used as lives. 
+
+\mbox{\Hypertarget{class_game_ac280e6f5ffa9ffac1afcc4a8a391eb8f}\label{class_game_ac280e6f5ffa9ffac1afcc4a8a391eb8f}} 
+\index{Game@{Game}!m\_mspfLabel@{m\_mspfLabel}}
+\index{m\_mspfLabel@{m\_mspfLabel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_mspfLabel}{m\_mspfLabel}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label$\ast$ Game\+::m\+\_\+mspf\+Label}
+
+
+
+Graphic User Interface label used as the framerate. 
+
+\mbox{\Hypertarget{class_game_a6953aa8d5e14f717c32271d6b1ef36d2}\label{class_game_a6953aa8d5e14f717c32271d6b1ef36d2}} 
+\index{Game@{Game}!m\_myLabel@{m\_myLabel}}
+\index{m\_myLabel@{m\_myLabel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_myLabel}{m\_myLabel}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label$\ast$ Game\+::m\+\_\+my\+Label}
+
+
+
+Graphic User Interface label used as milliseconds per frame. 
+
+\mbox{\Hypertarget{class_game_a2f818284846cdd8af4f201ffaa2fc152}\label{class_game_a2f818284846cdd8af4f201ffaa2fc152}} 
+\index{Game@{Game}!m\_platforms@{m\_platforms}}
+\index{m\_platforms@{m\_platforms}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_platforms}{m\_platforms}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}$>$ $>$ Game\+::m\+\_\+platforms}
+
+\mbox{\Hypertarget{class_game_a2072a1336b65b1ffbb33bf21c42f03e1}\label{class_game_a2072a1336b65b1ffbb33bf21c42f03e1}} 
+\index{Game@{Game}!m\_quitBtn@{m\_quitBtn}}
+\index{m\_quitBtn@{m\_quitBtn}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_quitBtn}{m\_quitBtn}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Button$\ast$ Game\+::m\+\_\+quit\+Btn = nullptr}
+
+
+
+Graphic User Interface button used to quit the game if you lose the game. 
+
+\mbox{\Hypertarget{class_game_a0678b125f08cc18bb748dc90a0eed9c4}\label{class_game_a0678b125f08cc18bb748dc90a0eed9c4}} 
+\index{Game@{Game}!m\_refreshTime@{m\_refreshTime}}
+\index{m\_refreshTime@{m\_refreshTime}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_refreshTime}{m\_refreshTime}}
+{\footnotesize\ttfamily float Game\+::m\+\_\+refresh\+Time = 0.\+02f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+how often to refresh the frame rate ui 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_a981ce8cda0585e85f4047a57ba29ad4b}\label{class_game_a981ce8cda0585e85f4047a57ba29ad4b}} 
+\index{Game@{Game}!m\_scoreLabel@{m\_scoreLabel}}
+\index{m\_scoreLabel@{m\_scoreLabel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{m\_scoreLabel}{m\_scoreLabel}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label$\ast$ Game\+::m\+\_\+score\+Label}
+
+
+
+Graphic User Interface label used as score. 
+
+\mbox{\Hypertarget{class_game_a4df3c171d63dd990ec0460891dab422d}\label{class_game_a4df3c171d63dd990ec0460891dab422d}} 
+\index{Game@{Game}!mTrayMgr@{mTrayMgr}}
+\index{mTrayMgr@{mTrayMgr}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{mTrayMgr}{mTrayMgr}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Tray\+Manager$\ast$ Game\+::m\+Tray\+Mgr}
+
+
+
+Graphic User Interface label used when you lose all lives. 
+
+\mbox{\Hypertarget{class_game_af34a45d1eceabfba4403b64d45876348}\label{class_game_af34a45d1eceabfba4403b64d45876348}} 
+\index{Game@{Game}!myTrayListener@{myTrayListener}}
+\index{myTrayListener@{myTrayListener}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{myTrayListener}{myTrayListener}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Tray\+Listener Game\+::my\+Tray\+Listener}
+
+
+
+Tray listener used for GUI. 
+
+\begin{DoxyWarning}{Warning}
+You need the tray listener for any type of GUI! 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_game_aa667a944bcf38a807f0c8dd5adc96a34}\label{class_game_aa667a944bcf38a807f0c8dd5adc96a34}} 
+\index{Game@{Game}!numofframes@{numofframes}}
+\index{numofframes@{numofframes}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{numofframes}{numofframes}}
+{\footnotesize\ttfamily int Game\+::numofframes = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+counter used to refresh fps ui 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_aacecda78ea5b9e76eaf53f511addd514}\label{class_game_aacecda78ea5b9e76eaf53f511addd514}} 
+\index{Game@{Game}!root@{root}}
+\index{root@{root}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily Root$\ast$ Game\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_adec79e7e26247ccdf0556137e540ac58}\label{class_game_adec79e7e26247ccdf0556137e540ac58}} 
+\index{Game@{Game}!scnMgr@{scnMgr}}
+\index{scnMgr@{scnMgr}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{scnMgr}{scnMgr}}
+{\footnotesize\ttfamily Scene\+Manager$\ast$ Game\+::scn\+Mgr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_afaf9404196df9968103d5b0d0ad08139}\label{class_game_afaf9404196df9968103d5b0d0ad08139}} 
+\index{Game@{Game}!score@{score}}
+\index{score@{score}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int Game\+::score = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+game score 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_a3985a7458932546918ec2e9560c332a3}\label{class_game_a3985a7458932546918ec2e9560c332a3}} 
+\index{Game@{Game}!timesincelastframe@{timesincelastframe}}
+\index{timesincelastframe@{timesincelastframe}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{timesincelastframe}{timesincelastframe}}
+{\footnotesize\ttfamily float Game\+::timesincelastframe = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+time passed since last frame fps was updated 
+
+\begin{DoxyNote}{Note}
+This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_game_a28ccd7e623832c0954e2f239dc722b57}\label{class_game_a28ccd7e623832c0954e2f239dc722b57}} 
+\index{Game@{Game}!vel@{vel}}
+\index{vel@{vel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{vel}{vel}}
+{\footnotesize\ttfamily Ogre\+::\+Vector2 Game\+::vel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_game_8h}{Game.\+h}}\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}
