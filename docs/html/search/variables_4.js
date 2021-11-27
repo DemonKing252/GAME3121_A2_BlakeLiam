@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['latestframerate_0',['latestframerate',['../class_game.html#a4109336118f5a332b1b56d17274d6ba5',1,'Game']]],
-  ['lives_1',['lives',['../class_game.html#aa65dc796ac407c6e5ffaab155530c90a',1,'Game']]]
+  ['indexorder_0',['indexOrder',['../class_game_object.html#a58df4bceb12da06639f3a519ec2d3704',1,'GameObject']]],
+  ['ispaused_1',['isPaused',['../class_game.html#a75207cac8e7ef5a9c08985d3f9615faa',1,'Game']]]
 ];

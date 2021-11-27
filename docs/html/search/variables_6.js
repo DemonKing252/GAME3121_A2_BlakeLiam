@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['numofframes_0',['numofframes',['../class_game.html#aa667a944bcf38a807f0c8dd5adc96a34',1,'Game']]]
+  ['m_5fdoodle_0',['m_doodle',['../class_game.html#a94cf712267d1cf770dff92dbe5a4c11d',1,'Game']]],
+  ['m_5ffpslabel_1',['m_fpsLabel',['../class_game.html#aa833da943e0bdc43023e27faea9c03b4',1,'Game']]],
+  ['m_5fgameoverlabel_2',['m_gameOverLabel',['../class_game.html#a050565826e96098323e6dbba91d1fc02',1,'Game']]],
+  ['m_5fgravity_3',['m_gravity',['../class_doodle.html#a741cdaf41205ab345868f053750d3815',1,'Doodle::m_gravity()'],['../class_platform.html#afe5da1f6a7420e020a602086f9b580b9',1,'Platform::m_gravity()']]],
+  ['m_5fkeydowndelegates_4',['m_keyDownDelegates',['../class_liam_1_1_input_engine.html#a4b23213543474621411a7a9bb0e6ab64',1,'Liam::InputEngine']]],
+  ['m_5fkeyupdelegates_5',['m_keyUpDelegates',['../class_liam_1_1_input_engine.html#a164d03e38004cbffed776055ed0bcb1e',1,'Liam::InputEngine']]],
+  ['m_5fliveslabel_6',['m_livesLabel',['../class_game.html#aaef85398a3a78f6ecca4021e5e775326',1,'Game']]],
+  ['m_5fmspflabel_7',['m_mspfLabel',['../class_game.html#ac280e6f5ffa9ffac1afcc4a8a391eb8f',1,'Game']]],
+  ['m_5fplatforms_8',['m_platforms',['../class_game.html#a2f818284846cdd8af4f201ffaa2fc152',1,'Game']]],
+  ['m_5fquitbtn_9',['m_quitBtn',['../class_game.html#a2072a1336b65b1ffbb33bf21c42f03e1',1,'Game']]],
+  ['m_5frefreshtime_10',['m_refreshTime',['../class_game.html#a0678b125f08cc18bb748dc90a0eed9c4',1,'Game']]],
+  ['m_5fscorelabel_11',['m_scoreLabel',['../class_game.html#a981ce8cda0585e85f4047a57ba29ad4b',1,'Game']]],
+  ['m_5fwinlabel_12',['m_winLabel',['../class_game.html#a3b36a6e0095dbfc7a0970df7c11c0cfd',1,'Game']]],
+  ['max_5fplatforms_13',['MAX_PLATFORMS',['../class_game.html#adaca459451333a3e9e2d8b9d1b430ab1',1,'Game']]],
+  ['message_14',['message',['../struct_liam_1_1_key_override_exception.html#a77d964c0a3f780e5006e55e061328c52',1,'Liam::KeyOverrideException']]],
+  ['mtraymgr_15',['mTrayMgr',['../class_game.html#a4df3c171d63dd990ec0460891dab422d',1,'Game']]],
+  ['myentity_16',['myEntity',['../class_doodle.html#a4c8ecc6793480c5301c443c562b0cf2c',1,'Doodle::myEntity()'],['../class_platform.html#a79d8a3dc6c9ba9dbc8d850e5e7dae084',1,'Platform::myEntity()']]],
+  ['mytraylistener_17',['myTrayListener',['../class_game.html#af34a45d1eceabfba4403b64d45876348',1,'Game']]]
 ];

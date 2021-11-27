@@ -15,46 +15,50 @@
 \DoxyCodeLine{14 \{}
 \DoxyCodeLine{15 \textcolor{keyword}{private}:}
 \DoxyCodeLine{16     }
-\DoxyCodeLine{20     Ogre::SceneNode* \mbox{\hyperlink{class_doodle_aafc9f361fc3c5bc6acfb8f02a1bf2056}{ballShape}};}
+\DoxyCodeLine{20     Ogre::SceneNode* \mbox{\hyperlink{class_doodle_a90397cc28e42ced174d92a8779614a4d}{doodleShape}};}
 \DoxyCodeLine{21 }
 \DoxyCodeLine{25     Ogre::Vector2 \mbox{\hyperlink{class_doodle_ae8d551ac82a8fa38bc4da4199f934ac9}{velocity}};}
 \DoxyCodeLine{26 }
 \DoxyCodeLine{30     Ogre::Vector2 \mbox{\hyperlink{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}{position}};}
 \DoxyCodeLine{31 }
-\DoxyCodeLine{32     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_doodle_a741cdaf41205ab345868f053750d3815}{m\_gravity}} = 0.f;}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{34 \textcolor{keyword}{public}:}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{41     \mbox{\hyperlink{class_doodle_a48b2ce4e023051bdbda64fda966c621f}{Doodle}}(Ogre::Entity* ballEntity, Ogre::SceneManager* scnMgr, \textcolor{keywordtype}{bool} useGravity = \textcolor{keyword}{true}, \textcolor{keywordtype}{float} grav = 9.8f);}
-\DoxyCodeLine{42     }
-\DoxyCodeLine{43 }
-\DoxyCodeLine{47     \mbox{\hyperlink{class_doodle_a48b2ce4e023051bdbda64fda966c621f}{Doodle}}();}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{52     \mbox{\hyperlink{class_doodle_a2f77f21d85c97d0ab7f7c569e05229fc}{\string~Doodle}}();}
-\DoxyCodeLine{53 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{36     Ogre::Entity* \mbox{\hyperlink{class_doodle_a4c8ecc6793480c5301c443c562b0cf2c}{myEntity}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_doodle_a741cdaf41205ab345868f053750d3815}{m\_gravity}} = 0.f;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{public}:}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{52     \mbox{\hyperlink{class_doodle_a48b2ce4e023051bdbda64fda966c621f}{Doodle}}(Ogre::String name, Ogre::SceneManager* scnMgr, \textcolor{keywordtype}{bool} useGravity = \textcolor{keyword}{true}, \textcolor{keywordtype}{float} grav = 9.8f);}
+\DoxyCodeLine{53     }
 \DoxyCodeLine{54 }
-\DoxyCodeLine{59     Ogre::Vector2 \mbox{\hyperlink{class_doodle_a397c527eec00294058fd2ad56c28458c}{getPosition}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{65     Ogre::SceneNode* \mbox{\hyperlink{class_doodle_a691312e503baaea4f1e71a1988d3a94c}{getShape}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{71     Ogre::Vector2 \mbox{\hyperlink{class_doodle_a07e3ada49b83a9bbeed4d668d96ae268}{getVelocity}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{73 }
-\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a946af37058b3c3842ccb6fe36c058baf}{setPosition}}(Ogre::Vector3 \mbox{\hyperlink{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}{position}});}
-\DoxyCodeLine{79 }
-\DoxyCodeLine{80 }
-\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_aee68058539b4efc09ac833f7e483af33}{setVelocity}}(Ogre::Vector2 vel);}
-\DoxyCodeLine{86 }
-\DoxyCodeLine{87 }
-\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a870615d7eceedbfaaf3bf56e3672bc5e}{update}}(\textcolor{keywordtype}{float} dt);}
-\DoxyCodeLine{95 }
-\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_aafa5c36cbebca1797868856038227261}{checkBounds}}(\mbox{\hyperlink{class_game_object}{GameObject}}* go);}
-\DoxyCodeLine{103 }
-\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a91e4fa50f86c4dd7e962a0fbdb5ff3ca}{reset}}();}
-\DoxyCodeLine{110 }
-\DoxyCodeLine{111 }
-\DoxyCodeLine{112 }
-\DoxyCodeLine{113 \};}
-\DoxyCodeLine{114 }
+\DoxyCodeLine{58     \mbox{\hyperlink{class_doodle_a48b2ce4e023051bdbda64fda966c621f}{Doodle}}();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63     \mbox{\hyperlink{class_doodle_a2f77f21d85c97d0ab7f7c569e05229fc}{\string~Doodle}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70     Ogre::Vector2 \mbox{\hyperlink{class_doodle_a397c527eec00294058fd2ad56c28458c}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76     Ogre::SceneNode* \mbox{\hyperlink{class_doodle_a691312e503baaea4f1e71a1988d3a94c}{getShape}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82     Ogre::Vector2 \mbox{\hyperlink{class_doodle_a07e3ada49b83a9bbeed4d668d96ae268}{getVelocity}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a946af37058b3c3842ccb6fe36c058baf}{setPosition}}(Ogre::Vector3 \mbox{\hyperlink{class_doodle_aed71923fdd644596cf4a7a788cc1ebee}{position}});}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_aee68058539b4efc09ac833f7e483af33}{setVelocity}}(Ogre::Vector2 vel);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a870615d7eceedbfaaf3bf56e3672bc5e}{update}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_ab0e763a9123159af95887bb1cc5c6965}{checkPlatformBounds}}(\mbox{\hyperlink{class_game_object}{GameObject}}* go);}
+\DoxyCodeLine{114     }
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a1c2ae391b4863ee89a0d5e7728c298a1}{checkCameraBounds}}();}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doodle_a91e4fa50f86c4dd7e962a0fbdb5ff3ca}{reset}}();}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \};}
 
 \end{DoxyCode}

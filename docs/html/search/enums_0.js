@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['meshtype_0',['MeshType',['../class_game.html#ad5f541514e0ffdcdc94d527f6ebacc75',1,'Game']]]
+  ['gameoutcome_0',['GameOutcome',['../_game_8h.html#a0bffae93324ed69979bdd0ab90df7227',1,'Game.h']]]
 ];

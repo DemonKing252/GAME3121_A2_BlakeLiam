@@ -16,38 +16,121 @@
 using namespace Ogre;
 using namespace OgreBites;
 
-// Behaviour is extended from std::exception in case while were checking for duplicated key exceptions
-// we run into a out of bounds exception
-struct KeyOverrideException : public std::exception
+
+namespace Liam
 {
 
-	KeyOverrideException(std::string msg) : message(msg) {}
-	std::string get() const;
-private:
-	std::string message;
-};
+	/// KeyOverrideException class
+	///
+	/// Used for exception handling in my Input engine class
+	struct KeyOverrideException : public std::exception
+	{
 
-class InputEngine
-{
-protected:
-	std::unordered_map<Keycode, std::function<void()>> m_keyDownDelegates;
-	std::unordered_map<Keycode, std::function<void()>> m_keyUpDelegates;
+		/// KeyOverrideException Constructor
+		/// @param (msg) message to show when the exception is caught
+		/// @returns no returns
+		KeyOverrideException(std::string msg) : message(msg) {}
 
-	InputEngine();
+		/// get
+		///
+		/// returns the exception message
+		std::string get() const;
+	private:
+		/**
+		* @brief Exception message
+		*/
+		std::string message;
+	};
 
-	static InputEngine* s_pInstance;
-public:
-	~InputEngine();
 
-	static InputEngine* GetInstance();
+	/// InputEngine class
+	///
+	/// A engine subsystem for listening for key events 
+	/// @note This is my custom engine subsystem
+	class InputEngine
+	{
+	protected:
+		/**
+		* @brief Key down delegates
+		* @warning Delegates have to have a void return type with no arguements
+		*/
+		std::unordered_map<Keycode, std::function<void()>> m_keyDownDelegates;
 
-	void AddKeyDownListener(Keycode param1, void(*callback)());
-	void AddKeyUpListener(Keycode param1, void(*callback)());
+		/**
+		* @brief Key down delegates
+		* @warning Delegates have to have a void return type with no arguements
+		*/
+		std::unordered_map<Keycode, std::function<void()>> m_keyUpDelegates;
 
-	void RemoveInputListener(Keycode param1);
-	void PollEvents(const KeyboardEvent& evt);
-	
-	// To whom it may concern:
-	// I don't recommend you define your callbacks here
-	// Your methods have to be type static void (no return type) for this to work
-};
+		/// InputEngine Destructor
+		///
+		/// called in game class
+		/// @param (param1) Keycode, (void*(callback()) the function that gets called if this key is pressed down
+		/// @returns no return type
+		InputEngine();
+		/**
+		* @brief Singleton instance for this class
+		* @warning Delegates have to have a void return type with no arguements
+		*/
+		static InputEngine* s_pInstance;
+	public:
+
+		/// InputEngine Destructor
+		///
+		/// called in game class
+		/// @param (param1) Keycode, (void*(callback()) the function that gets called if this key is pressed down
+		/// @returns no return type
+		~InputEngine();
+
+		/// Delete copy constructor
+		///
+		/// standard practice for singletons
+		InputEngine(InputEngine& rhs) = delete;
+
+		/// operator assignment function
+		///
+		/// standard practice for singletons
+		void operator=(InputEngine& rhs) = delete;
+
+		/// GetInstance
+		///
+		/// Method that returns the singleton instance
+		static InputEngine* GetInstance();
+
+		/// AddKeyDownListener
+		///
+		/// called in game class
+		/// @param (param1) Keycode, (void*(callback()) the function that gets called if this key is pressed down
+		/// @returns no return type
+		/// @warning I highly recommend you DO NOT define your callbacks here in this class
+		void AddKeyDownListener(Keycode param1, void(*callback)());
+
+
+		/// AddKeyUpListener
+		///
+		/// Called when invoking key up events
+		/// @param (param1) Keycode, (void*(callback()) the function that gets called if this key is pressed up
+		/// @returns no return type
+		/// @warning I highly recommend you DO NOT define your callbacks here in this class
+		void AddKeyUpListener(Keycode param1, void(*callback)());
+
+
+		/// RemoveInputListener
+		///
+		/// Called when invoking key up events
+		/// @param (param1) Keycode, (void*(callback()) the function that gets called if this key is pressed down
+		/// @returns no return type
+		void RemoveInputListener(Keycode param1);
+
+
+		/// PollEvents
+		///
+		/// Call this function whenever a key is pressed up or down
+		/// @see Game::keyPressed
+		/// @param (evt) KeyboardEvent
+		/// @returns no return type
+		/// @warning Make sure your calling this function, nothing will happen if you don't check for events.
+		void PollEvents(const KeyboardEvent& evt);
+
+	};
+}

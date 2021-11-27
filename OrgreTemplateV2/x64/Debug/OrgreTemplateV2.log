@@ -1,4 +1,4 @@
-﻿  InputEngine.cpp
+﻿  main.cpp
 C:\ogre-sdk-v2.1\OgreMain\Include\OgreAxisAlignedBox.h(66,25): warning C4251: 'Ogre::AxisAlignedBox::mMinimum': class 'Ogre::Vector<3,Ogre::Real>' needs to have dll-interface to be used by clients of class 'Ogre::AxisAlignedBox'
 C:\ogre-sdk-v2.1\OgreMain\Include\OgrePrerequisites.h(254): message : see declaration of 'Ogre::Vector<3,Ogre::Real>'
 C:\ogre-sdk-v2.1\OgreMain\Include\OgreAxisAlignedBox.h(67,25): warning C4251: 'Ogre::AxisAlignedBox::mMaximum': class 'Ogre::Vector<3,Ogre::Real>' needs to have dll-interface to be used by clients of class 'Ogre::AxisAlignedBox'

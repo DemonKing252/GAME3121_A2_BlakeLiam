@@ -25,7 +25,13 @@
 var NAVTREE =
 [
   [ "Doodle Engine", "index.html", [
-    [ "GAME3121_A2_BlakeLiam", "md__c___users__demon__one_drive__documents__git_hub__g_a_m_e3121__assignment2__g_a_m_e3121__a2__blake_liam__r_e_a_d_m_e.html", null ],
+    [ "GAME3121_A2_BlakeLiam", "md__c___users__demon__one_drive__documents__git_hub__g_a_m_e3121__assignment2__g_a_m_e3121__a2__blake_liam__r_e_a_d_m_e.html", [
+      [ "Ogre Engines used", "md__c___users__demon__one_drive__documents__git_hub__g_a_m_e3121__assignment2__g_a_m_e3121__a2__blake_liam__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "My Engine:", "md__c___users__demon__one_drive__documents__git_hub__g_a_m_e3121__assignment2__g_a_m_e3121__a2__blake_liam__r_e_a_d_m_e.html#autotoc_md2", null ]
+    ] ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -42,7 +48,8 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Enumerations", "globals_enum.html", null ]
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ]
       ] ]
     ] ]
   ] ]

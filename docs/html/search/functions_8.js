@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['platform_0',['Platform',['../class_platform.html#a1df242ad75936709806865736c668354',1,'Platform::Platform(Ogre::Entity *ballEntity, Ogre::SceneManager *scnMgr, bool useGravity, float grav)'],['../class_platform.html#a52028ea2984cbfdf8e9f42ee87f66cfe',1,'Platform::Platform()']]]
+  ['onakeydown_0',['OnAKeyDown',['../class_game.html#a4c7987f969d4adac41ec53e484d0c80d',1,'Game']]],
+  ['ondkeydown_1',['OnDKeyDown',['../class_game.html#a362a68ca418c82f654792911fcd36f05',1,'Game']]],
+  ['operator_3d_2',['operator=',['../class_liam_1_1_input_engine.html#acd5900e64873dace45ebb0fbc321797e',1,'Liam::InputEngine']]]
 ];

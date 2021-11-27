@@ -179,13 +179,13 @@ void Game::QuitGame()
     Game::GetInstance()->getRoot()->queueEndRendering();
     Game::GetInstance()->m_doodle->setVelocity(Game::GetInstance()->vel);
 }
-Game* Game::instance = nullptr;
+Game* Game::s_pInstance = nullptr;
 Game* Game::GetInstance()
 {
-    if (instance == nullptr)
-        instance = new Game();
+    if (s_pInstance == nullptr)
+        s_pInstance = new Game();
 
-    return instance;
+    return s_pInstance;
 }
 void Game::refreshUserInterface()
 {
@@ -338,10 +338,10 @@ void Game::setup()
 
 
     // Input engine
-    InputEngine::GetInstance()->AddKeyDownListener('a', Game::OnAKeyDown);
-    InputEngine::GetInstance()->AddKeyDownListener('d', Game::OnDKeyDown);
+    Liam::InputEngine::GetInstance()->AddKeyDownListener('a' | 'A', Game::OnAKeyDown);
+    Liam::InputEngine::GetInstance()->AddKeyDownListener('d' | 'D', Game::OnDKeyDown);
 
-    InputEngine::GetInstance()->AddKeyDownListener(SDLK_ESCAPE, Game::QuitGame);
+    Liam::InputEngine::GetInstance()->AddKeyDownListener(SDLK_ESCAPE, Game::QuitGame);
 
 
 }
@@ -349,14 +349,14 @@ void Game::setup()
 
 bool Game::keyPressed(const KeyboardEvent& evt)
 {
-    InputEngine::GetInstance()->PollEvents(evt);
+    Liam::InputEngine::GetInstance()->PollEvents(evt);
     
     return true;
 }
 
 bool Game::keyReleased(const KeyboardEvent& evt)
 {
-    InputEngine::GetInstance()->PollEvents(evt);
+    Liam::InputEngine::GetInstance()->PollEvents(evt);
     vel = Ogre::Vector2(+0.f, static_cast<Doodle*>(m_doodle.get())->getVelocity().y);
     m_doodle->setVelocity(vel);
     return true;

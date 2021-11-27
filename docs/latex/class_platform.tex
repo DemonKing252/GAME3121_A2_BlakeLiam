@@ -2,7 +2,7 @@
 \label{class_platform}\index{Platform@{Platform}}
 
 
-Pong Bat.  
+\mbox{\hyperlink{class_platform}{Platform}}.  
 
 
 
@@ -18,58 +18,64 @@ Inheritance diagram for Platform\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_platform_a1df242ad75936709806865736c668354}{Platform}} (Ogre\+::\+Entity $\ast$ball\+Entity, Ogre\+::\+Scene\+Manager $\ast$scn\+Mgr, bool use\+Gravity, float grav)
-\begin{DoxyCompactList}\small\item\em Constructor for the ball class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_platform_a321e216a3b145441bc4da05d6ab175ac}{Platform}} (Ogre\+::\+String name, Ogre\+::\+Scene\+Manager $\ast$scn\+Mgr, bool use\+Gravity, float grav)
+\begin{DoxyCompactList}\small\item\em Constructor for the platform class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_platform_a52028ea2984cbfdf8e9f42ee87f66cfe}{Platform}} ()
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_platform_a13b5e4ef946b8a2fe38d22014145ab68}{$\sim$\+Platform}} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 Ogre\+::\+Vector2 \mbox{\hyperlink{class_platform_acfb51f627fec8a4f5dcd8445a073bd77}{get\+Position}} () const
-\begin{DoxyCompactList}\small\item\em Gets the position of the ball. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the position of the platform. \end{DoxyCompactList}\item 
 Ogre\+::\+Scene\+Node $\ast$ \mbox{\hyperlink{class_platform_a0fe4cf44056d1924075a3afe4b518db1}{get\+Shape}} () const
 \begin{DoxyCompactList}\small\item\em Gets the bat shape. \end{DoxyCompactList}\item 
 Ogre\+::\+Vector2 \mbox{\hyperlink{class_platform_a08b5c95a049d1276282ff2a522730ba6}{get\+Velocity}} () const
 \begin{DoxyCompactList}\small\item\em Gets the bat velocity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_platform_a690f60d7d69e7e61cf1bef7dbe149402}{set\+Position}} (Ogre\+::\+Vector3 \mbox{\hyperlink{class_platform_a190e56a7e74283f4a100cbfd262466fd}{position}})
-\begin{DoxyCompactList}\small\item\em Set ball position. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set platform position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_platform_aba8551ce3cd1198b1e669f38d4638d74}{set\+Velocity}} (Ogre\+::\+Vector2 vel)
-\begin{DoxyCompactList}\small\item\em Set ball velocity. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set platform velocity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_platform_a8ff7c9d7ab2ed9346ba08b9c7e448d24}{update}} (float dt)
 \begin{DoxyCompactList}\small\item\em update \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_platform_afe5da1f6a7420e020a602086f9b580b9}{m\+\_\+gravity}} = 0.f
-\item 
+\begin{DoxyCompactList}\small\item\em (m\+\_\+gravity) Gravity for this object (in ogre units per second) \end{DoxyCompactList}\item 
 Ogre\+::\+Scene\+Node $\ast$ \mbox{\hyperlink{class_platform_a9b71a786e1e7d80915889424aa6c6ec5}{bat\+Shape}}
 \begin{DoxyCompactList}\small\item\em (bat\+Shape) Prefab type plane to represent the bat \end{DoxyCompactList}\item 
 Ogre\+::\+Vector2 \mbox{\hyperlink{class_platform_a8ed813443021eeee99ac9ccab0509c22}{velocity}}
-\begin{DoxyCompactList}\small\item\em (velocity) Current Velocity for the ball \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em (velocity) Current Velocity for the platform \end{DoxyCompactList}\item 
 Ogre\+::\+Vector2 \mbox{\hyperlink{class_platform_a190e56a7e74283f4a100cbfd262466fd}{position}}
-\begin{DoxyCompactList}\small\item\em (position) Current position of the ball \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em (position) Current position of the platform \end{DoxyCompactList}\item 
+Ogre\+::\+Entity $\ast$ \mbox{\hyperlink{class_platform_a79d8a3dc6c9ba9dbc8d850e5e7dae084}{my\+Entity}}
+\begin{DoxyCompactList}\small\item\em (my\+Entity) Entity for the platform \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Pong Bat. 
+\mbox{\hyperlink{class_platform}{Platform}}. 
 
-A class which manages the behaviour of the paddle. 
+A class which manages the behaviour of the platform. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_platform_a1df242ad75936709806865736c668354}\label{class_platform_a1df242ad75936709806865736c668354}} 
+\mbox{\Hypertarget{class_platform_a321e216a3b145441bc4da05d6ab175ac}\label{class_platform_a321e216a3b145441bc4da05d6ab175ac}} 
 \index{Platform@{Platform}!Platform@{Platform}}
 \index{Platform@{Platform}!Platform@{Platform}}
 \doxysubsubsection{\texorpdfstring{Platform()}{Platform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Platform\+::\+Platform (\begin{DoxyParamCaption}\item[{Ogre\+::\+Entity $\ast$}]{ball\+Entity,  }\item[{Ogre\+::\+Scene\+Manager $\ast$}]{scn\+Mgr,  }\item[{bool}]{use\+Gravity,  }\item[{float}]{grav }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Platform\+::\+Platform (\begin{DoxyParamCaption}\item[{Ogre\+::\+String}]{name,  }\item[{Ogre\+::\+Scene\+Manager $\ast$}]{scn\+Mgr,  }\item[{bool}]{use\+Gravity,  }\item[{float}]{grav }\end{DoxyParamCaption})}
 
 
 
-Constructor for the ball class. 
+Constructor for the platform class. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em ball\+Entity} & A refrence to the entity you want to use \\
+{\em (name)} & A refrence to the entity you want to use \\
 \hline
-{\em scn\+Mgr} & A refrence to the scene managerwhat \\
+{\em (scn\+Mgr)} & A refrence to the scene manager \\
+\hline
+{\em (use\+Gravity)} & If gravity should be enabled \\
+\hline
+{\em (grav)} & Gravity in ogre units per second \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
@@ -116,7 +122,7 @@ Destructor.
 
 
 
-Gets the position of the ball. 
+Gets the position of the platform. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -164,7 +170,7 @@ Gets the bat velocity.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Returns the velocity of the ball as an Ogre\+::\+Vector2 
+Returns the velocity of the platform as an Ogre\+::\+Vector2 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_platform_a690f60d7d69e7e61cf1bef7dbe149402}\label{class_platform_a690f60d7d69e7e61cf1bef7dbe149402}} 
 \index{Platform@{Platform}!setPosition@{setPosition}}
@@ -174,7 +180,7 @@ Returns the velocity of the ball as an Ogre\+::\+Vector2
 
 
 
-Set ball position. 
+Set platform position. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -196,7 +202,7 @@ Reimplemented from \mbox{\hyperlink{class_game_object_a96fb64cae2361d8a64b4abafd
 
 
 
-Set ball velocity. 
+Set platform velocity. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -252,6 +258,20 @@ Reimplemented from \mbox{\hyperlink{class_game_object_a2fece397b6343682d639f8943
 \doxysubsubsection{\texorpdfstring{m\_gravity}{m\_gravity}}
 {\footnotesize\ttfamily float Platform\+::m\+\_\+gravity = 0.f\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+(m\+\_\+gravity) Gravity for this object (in ogre units per second) 
+
+\mbox{\Hypertarget{class_platform_a79d8a3dc6c9ba9dbc8d850e5e7dae084}\label{class_platform_a79d8a3dc6c9ba9dbc8d850e5e7dae084}} 
+\index{Platform@{Platform}!myEntity@{myEntity}}
+\index{myEntity@{myEntity}!Platform@{Platform}}
+\doxysubsubsection{\texorpdfstring{myEntity}{myEntity}}
+{\footnotesize\ttfamily Ogre\+::\+Entity$\ast$ Platform\+::my\+Entity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(my\+Entity) Entity for the platform 
+
 \mbox{\Hypertarget{class_platform_a190e56a7e74283f4a100cbfd262466fd}\label{class_platform_a190e56a7e74283f4a100cbfd262466fd}} 
 \index{Platform@{Platform}!position@{position}}
 \index{position@{position}!Platform@{Platform}}
@@ -260,7 +280,7 @@ Reimplemented from \mbox{\hyperlink{class_game_object_a2fece397b6343682d639f8943
 
 
 
-(position) Current position of the ball 
+(position) Current position of the platform 
 
 \mbox{\Hypertarget{class_platform_a8ed813443021eeee99ac9ccab0509c22}\label{class_platform_a8ed813443021eeee99ac9ccab0509c22}} 
 \index{Platform@{Platform}!velocity@{velocity}}
@@ -270,7 +290,7 @@ Reimplemented from \mbox{\hyperlink{class_game_object_a2fece397b6343682d639f8943
 
 
 
-(velocity) Current Velocity for the ball 
+(velocity) Current Velocity for the platform 
 
 
 

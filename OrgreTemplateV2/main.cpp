@@ -1,19 +1,24 @@
 #include "Game.h"
 
-/// Ogres Engines
+/// Ogres Engine
+///
 /// #1 - Scene Manager
+/// 
 /// #2 - Material Manager
+/// 
 /// #3 - Tray Manager
+/// 
 /// #4 - Shader Generator
-/// #5 - Frame Listener
 /// 
 /// My Engine:
-/// Input Engine utilizing an unordered map of type SDL Keysym, std::function
-
+/// 
+/// Input Engine that listens for key events and calls that function when the key is pressed or released (you can listen for Key down and up events)
+/// @see Liam::InputEngine
+/// 
 /// Welcome to the main function
 ///
 /// This is where the magic begins
-/// @see See Game class and explore what it can do!
+/// @see Game class and explore what it can do!
 int main(int argc, char** argv)
 {
     try

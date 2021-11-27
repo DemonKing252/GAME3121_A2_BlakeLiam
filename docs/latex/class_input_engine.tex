@@ -1,0 +1,262 @@
+\hypertarget{class_input_engine}{}\doxysection{Input\+Engine Class Reference}
+\label{class_input_engine}\index{InputEngine@{InputEngine}}
+
+
+\mbox{\hyperlink{class_input_engine}{Input\+Engine}} class.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Engine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_engine_a87d0ba81ed29ed938fac7faa728a3663}{$\sim$\+Input\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_input_engine}{Input\+Engine}} Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_engine_a323c149dac3a81e946d2dd7118682a4f}{Input\+Engine}} (\mbox{\hyperlink{class_input_engine}{Input\+Engine}} \&rhs)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_engine_a169e20b028b3978124338902a92ed58a}{operator=}} (\mbox{\hyperlink{class_input_engine}{Input\+Engine}} \&rhs)=delete
+\begin{DoxyCompactList}\small\item\em operator assignment function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_engine_ad5dca80c44e0c97c4860740938448354}{Add\+Key\+Down\+Listener}} (Keycode param1, void($\ast$callback)())
+\begin{DoxyCompactList}\small\item\em Add\+Key\+Down\+Listener. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_engine_adbb3628acf2006e6fe9d7a655a736112}{Add\+Key\+Up\+Listener}} (Keycode param1, void($\ast$callback)())
+\begin{DoxyCompactList}\small\item\em Add\+Key\+Up\+Listener. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_engine_a059eb45de64d5d56fdfd3a670e1dfa2a}{Remove\+Input\+Listener}} (Keycode param1)
+\begin{DoxyCompactList}\small\item\em Remove\+Input\+Listener. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_engine_ad983ad6540dc4fb8b590b6d1c045a65b}{Poll\+Events}} (const Keyboard\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em Poll\+Events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_input_engine}{Input\+Engine}} $\ast$ \mbox{\hyperlink{class_input_engine_af0a249994302de4ddd30e43e592b18c0}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get\+Instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_engine_ab1e1c1fad0069c085e9ffe56157267ac}{Input\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_input_engine}{Input\+Engine}} Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ Keycode, std\+::function$<$ void()$>$ $>$ \mbox{\hyperlink{class_input_engine_a156283a24a90e443e9f30cd1bbf0bbd4}{m\+\_\+key\+Down\+Delegates}}
+\begin{DoxyCompactList}\small\item\em Key down delegates. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ Keycode, std\+::function$<$ void()$>$ $>$ \mbox{\hyperlink{class_input_engine_af43196ae3e06f551b098e45fee5b1a10}{m\+\_\+key\+Up\+Delegates}}
+\begin{DoxyCompactList}\small\item\em Key down delegates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_input_engine}{Input\+Engine}} $\ast$ \mbox{\hyperlink{class_input_engine_aee374976516fc3b5d52c8e2768a03f29}{s\+\_\+p\+Instance}} = nullptr
+\begin{DoxyCompactList}\small\item\em Singleton instance for this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_input_engine}{Input\+Engine}} class. 
+
+A engine subsystem for listening for key events \begin{DoxyNote}{Note}
+This is my custom engine subsystem 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_input_engine_ab1e1c1fad0069c085e9ffe56157267ac}\label{class_input_engine_ab1e1c1fad0069c085e9ffe56157267ac}} 
+\index{InputEngine@{InputEngine}!InputEngine@{InputEngine}}
+\index{InputEngine@{InputEngine}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{InputEngine()}{InputEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Input\+Engine\+::\+Input\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{class_input_engine}{Input\+Engine}} Destructor. 
+
+called in game class 
+\begin{DoxyParams}{Parameters}
+{\em (param1)} & Keycode, (void$\ast$(callback()) the function that gets called if this key is pressed down \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_engine_a87d0ba81ed29ed938fac7faa728a3663}\label{class_input_engine_a87d0ba81ed29ed938fac7faa728a3663}} 
+\index{InputEngine@{InputEngine}!````~InputEngine@{$\sim$InputEngine}}
+\index{````~InputEngine@{$\sim$InputEngine}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputEngine()}{~InputEngine()}}
+{\footnotesize\ttfamily Input\+Engine\+::$\sim$\+Input\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_input_engine}{Input\+Engine}} Destructor. 
+
+called in game class 
+\begin{DoxyParams}{Parameters}
+{\em (param1)} & Keycode, (void$\ast$(callback()) the function that gets called if this key is pressed down \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_engine_a323c149dac3a81e946d2dd7118682a4f}\label{class_input_engine_a323c149dac3a81e946d2dd7118682a4f}} 
+\index{InputEngine@{InputEngine}!InputEngine@{InputEngine}}
+\index{InputEngine@{InputEngine}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{InputEngine()}{InputEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Input\+Engine\+::\+Input\+Engine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_input_engine}{Input\+Engine}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete copy constructor. 
+
+standard practice for singletons 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_engine_ad5dca80c44e0c97c4860740938448354}\label{class_input_engine_ad5dca80c44e0c97c4860740938448354}} 
+\index{InputEngine@{InputEngine}!AddKeyDownListener@{AddKeyDownListener}}
+\index{AddKeyDownListener@{AddKeyDownListener}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{AddKeyDownListener()}{AddKeyDownListener()}}
+{\footnotesize\ttfamily void Input\+Engine\+::\+Add\+Key\+Down\+Listener (\begin{DoxyParamCaption}\item[{Keycode}]{param1,  }\item[{void($\ast$)()}]{callback }\end{DoxyParamCaption})}
+
+
+
+Add\+Key\+Down\+Listener. 
+
+called in game class 
+\begin{DoxyParams}{Parameters}
+{\em (param1)} & Keycode, (void$\ast$(callback()) the function that gets called if this key is pressed down \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+I highly recommend you DO NOT define your callbacks here in this class 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_input_engine_adbb3628acf2006e6fe9d7a655a736112}\label{class_input_engine_adbb3628acf2006e6fe9d7a655a736112}} 
+\index{InputEngine@{InputEngine}!AddKeyUpListener@{AddKeyUpListener}}
+\index{AddKeyUpListener@{AddKeyUpListener}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{AddKeyUpListener()}{AddKeyUpListener()}}
+{\footnotesize\ttfamily void Input\+Engine\+::\+Add\+Key\+Up\+Listener (\begin{DoxyParamCaption}\item[{Keycode}]{param1,  }\item[{void($\ast$)()}]{callback }\end{DoxyParamCaption})}
+
+
+
+Add\+Key\+Up\+Listener. 
+
+Called when invoking key up events 
+\begin{DoxyParams}{Parameters}
+{\em (param1)} & Keycode, (void$\ast$(callback()) the function that gets called if this key is pressed up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+I highly recommend you DO NOT define your callbacks here in this class 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_input_engine_af0a249994302de4ddd30e43e592b18c0}\label{class_input_engine_af0a249994302de4ddd30e43e592b18c0}} 
+\index{InputEngine@{InputEngine}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_engine}{Input\+Engine}} $\ast$ Input\+Engine\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get\+Instance. 
+
+Method that returns the singleton instance \mbox{\Hypertarget{class_input_engine_a169e20b028b3978124338902a92ed58a}\label{class_input_engine_a169e20b028b3978124338902a92ed58a}} 
+\index{InputEngine@{InputEngine}!operator=@{operator=}}
+\index{operator=@{operator=}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Input\+Engine\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_input_engine}{Input\+Engine}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+operator assignment function 
+
+standard practice for singletons \mbox{\Hypertarget{class_input_engine_ad983ad6540dc4fb8b590b6d1c045a65b}\label{class_input_engine_ad983ad6540dc4fb8b590b6d1c045a65b}} 
+\index{InputEngine@{InputEngine}!PollEvents@{PollEvents}}
+\index{PollEvents@{PollEvents}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{PollEvents()}{PollEvents()}}
+{\footnotesize\ttfamily void Input\+Engine\+::\+Poll\+Events (\begin{DoxyParamCaption}\item[{const Keyboard\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+
+
+Poll\+Events. 
+
+Call this function whenever a key is pressed up or down \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_game_a2ba00c3475d222573e5ad54b88b389b7}{Game\+::key\+Pressed}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em (evt)} & Keyboard\+Event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Make sure your calling this function, nothing will happen if you don\textquotesingle{}t check for events. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_input_engine_a059eb45de64d5d56fdfd3a670e1dfa2a}\label{class_input_engine_a059eb45de64d5d56fdfd3a670e1dfa2a}} 
+\index{InputEngine@{InputEngine}!RemoveInputListener@{RemoveInputListener}}
+\index{RemoveInputListener@{RemoveInputListener}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{RemoveInputListener()}{RemoveInputListener()}}
+{\footnotesize\ttfamily void Input\+Engine\+::\+Remove\+Input\+Listener (\begin{DoxyParamCaption}\item[{Keycode}]{param1 }\end{DoxyParamCaption})}
+
+
+
+Remove\+Input\+Listener. 
+
+Called when invoking key up events 
+\begin{DoxyParams}{Parameters}
+{\em (param1)} & Keycode, (void$\ast$(callback()) the function that gets called if this key is pressed down \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_input_engine_a156283a24a90e443e9f30cd1bbf0bbd4}\label{class_input_engine_a156283a24a90e443e9f30cd1bbf0bbd4}} 
+\index{InputEngine@{InputEngine}!m\_keyDownDelegates@{m\_keyDownDelegates}}
+\index{m\_keyDownDelegates@{m\_keyDownDelegates}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{m\_keyDownDelegates}{m\_keyDownDelegates}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Keycode, std\+::function$<$void()$>$ $>$ Input\+Engine\+::m\+\_\+key\+Down\+Delegates\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Key down delegates. 
+
+\begin{DoxyWarning}{Warning}
+Delegates have to have a void return type with no arguements 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_input_engine_af43196ae3e06f551b098e45fee5b1a10}\label{class_input_engine_af43196ae3e06f551b098e45fee5b1a10}} 
+\index{InputEngine@{InputEngine}!m\_keyUpDelegates@{m\_keyUpDelegates}}
+\index{m\_keyUpDelegates@{m\_keyUpDelegates}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{m\_keyUpDelegates}{m\_keyUpDelegates}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Keycode, std\+::function$<$void()$>$ $>$ Input\+Engine\+::m\+\_\+key\+Up\+Delegates\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Key down delegates. 
+
+\begin{DoxyWarning}{Warning}
+Delegates have to have a void return type with no arguements 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_input_engine_aee374976516fc3b5d52c8e2768a03f29}\label{class_input_engine_aee374976516fc3b5d52c8e2768a03f29}} 
+\index{InputEngine@{InputEngine}!s\_pInstance@{s\_pInstance}}
+\index{s\_pInstance@{s\_pInstance}!InputEngine@{InputEngine}}
+\doxysubsubsection{\texorpdfstring{s\_pInstance}{s\_pInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_engine}{Input\+Engine}} $\ast$ Input\+Engine\+::s\+\_\+p\+Instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Singleton instance for this class. 
+
+\begin{DoxyWarning}{Warning}
+Delegates have to have a void return type with no arguements 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_input_engine_8h}{Input\+Engine.\+h}}\item 
+C\+:/\+Users/\+Demon/\+One\+Drive/\+Documents/\+Git\+Hub/\+GAME3121\+\_\+\+Assignment2/\+GAME3121\+\_\+\+A2\+\_\+\+Blake\+Liam/\+Orgre\+Template\+V2/\mbox{\hyperlink{_input_engine_8cpp}{Input\+Engine.\+cpp}}\end{DoxyCompactItemize}

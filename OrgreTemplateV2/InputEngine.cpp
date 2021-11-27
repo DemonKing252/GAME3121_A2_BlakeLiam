@@ -1,25 +1,25 @@
 #include "InputEngine.h"
 
-InputEngine* InputEngine::s_pInstance = nullptr;
+Liam::InputEngine* Liam::InputEngine::s_pInstance = nullptr;
 
-InputEngine::InputEngine()
+Liam::InputEngine::InputEngine()
 {
 }
 
-InputEngine::~InputEngine()
+Liam::InputEngine::~InputEngine()
 {
 }
 
-InputEngine* InputEngine::GetInstance()
+Liam::InputEngine* Liam::InputEngine::GetInstance()
 {
 	if (s_pInstance == nullptr)
 	{
-		s_pInstance = new InputEngine();
+		s_pInstance = new Liam::InputEngine();
 	}
 	return s_pInstance;
 }
 
-void InputEngine::AddKeyDownListener(Keycode param1, void(*callback)())
+void Liam::InputEngine::AddKeyDownListener(Keycode param1, void(*callback)())
 {
 	try
 	{
@@ -41,7 +41,7 @@ void InputEngine::AddKeyDownListener(Keycode param1, void(*callback)())
 	m_keyDownDelegates[param1] = callback;
 }
 
-void InputEngine::AddKeyUpListener(Keycode param1, void(*callback)())
+void Liam::InputEngine::AddKeyUpListener(Keycode param1, void(*callback)())
 {
 	try
 	{
@@ -63,12 +63,12 @@ void InputEngine::AddKeyUpListener(Keycode param1, void(*callback)())
 	m_keyUpDelegates[param1] = callback;
 }
 
-void InputEngine::RemoveInputListener(Keycode param1)
+void Liam::InputEngine::RemoveInputListener(Keycode param1)
 {
 	m_keyDownDelegates.erase(param1);
 }
 
-void InputEngine::PollEvents(const KeyboardEvent& evt)
+void Liam::InputEngine::PollEvents(const KeyboardEvent& evt)
 {
 	for (std::pair<Keycode, std::function<void(void)>> del : m_keyDownDelegates)
 	{
@@ -82,7 +82,7 @@ void InputEngine::PollEvents(const KeyboardEvent& evt)
 	}
 }
 
-std::string KeyOverrideException::get() const
+std::string Liam::KeyOverrideException::get() const
 {
 	return message;
 }

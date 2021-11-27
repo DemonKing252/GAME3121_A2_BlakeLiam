@@ -6,12 +6,15 @@
 #include "OgreTrays.h"
 #include "GameObject.h"
 
-/// Pong Bat
+/// Platform
 ///
-/// A class which manages the behaviour of the paddle.
+/// A class which manages the behaviour of the platform.
 class Platform : public GameObject
 {
 private:
+	/**
+	* @brief (m_gravity) Gravity for this object (in ogre units per second)
+	*/
 	float m_gravity = 0.f;
 
 	/**
@@ -20,25 +23,29 @@ private:
 	Ogre::SceneNode* batShape;
 
 	/**
-	* @brief (velocity) Current Velocity for the ball
+	* @brief (velocity) Current Velocity for the platform
 	*/
 	Ogre::Vector2 velocity;
 
 	/**
-	* @brief (position) Current position of the ball
+	* @brief (position) Current position of the platform
 	*/
 	Ogre::Vector2 position;
 
-
+	/**
+	* @brief (myEntity) Entity for the platform
+	*/
 	Ogre::Entity* myEntity;
 
 
 public:
 
-	/// Constructor for the ball class.
+	/// Constructor for the platform class.
 	/// 
-	/// @param ballEntity A refrence to the entity you want to use
-	/// @param scnMgr A refrence to the scene managerwhat 
+	/// @param (name) A refrence to the entity you want to use
+	/// @param (scnMgr) A refrence to the scene manager
+	/// @param (useGravity) If gravity should be enabled
+	/// @param (grav) Gravity in ogre units per second
 	/// @see Assignment1::setup()
 	Platform(Ogre::String name, Ogre::SceneManager* scnMgr, bool useGravity, float grav);
 
@@ -54,7 +61,7 @@ public:
 	~Platform();
 
 
-	/// Gets the position of the ball.
+	/// Gets the position of the platform.
 	/// 
 	/// @param no parameters
 	/// @returns Returns the position as an Ogre::Vector2
@@ -69,16 +76,16 @@ public:
 	/// Gets the bat velocity.
 	/// 
 	/// @param no parameters
-	/// @returns Returns the velocity of the ball as an Ogre::Vector2
+	/// @returns Returns the velocity of the platform as an Ogre::Vector2
 	Ogre::Vector2 getVelocity() const;
 
-	/// Set ball position.
+	/// Set platform position.
 	/// 
 	/// @param (position) desired position to be set
 	/// @returns no return type
 	void setPosition(Ogre::Vector3 position);
 
-	/// Set ball velocity.
+	/// Set platform velocity.
 	/// 
 	/// @param (vel) Velocity to be set
 	/// @returns no return type

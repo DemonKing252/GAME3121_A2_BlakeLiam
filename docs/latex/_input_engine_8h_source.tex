@@ -1,0 +1,71 @@
+\hypertarget{_input_engine_8h_source}{}\doxysection{Input\+Engine.\+h}
+\label{_input_engine_8h_source}\index{C:/Users/Demon/OneDrive/Documents/GitHub/GAME3121\_Assignment2/GAME3121\_A2\_BlakeLiam/OrgreTemplateV2/InputEngine.h@{C:/Users/Demon/OneDrive/Documents/GitHub/GAME3121\_Assignment2/GAME3121\_A2\_BlakeLiam/OrgreTemplateV2/InputEngine.h}}
+\mbox{\hyperlink{_input_engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Ogre.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}OgreApplicationContext.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}OgreInput.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}OgreRTShaderSystem.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}OgreTrays.h"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{using namespace }Ogre;}
+\DoxyCodeLine{17 \textcolor{keyword}{using namespace }OgreBites;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_liam}{Liam}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_liam_1_1_key_override_exception}{KeyOverrideException}} : \textcolor{keyword}{public} std::exception}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32         \mbox{\hyperlink{struct_liam_1_1_key_override_exception_a8de39f4cde391727ebf4ae30b948f6fb}{KeyOverrideException}}(std::string msg) : \mbox{\hyperlink{struct_liam_1_1_key_override_exception_a77d964c0a3f780e5006e55e061328c52}{message}}(msg) \{\}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37         std::string \mbox{\hyperlink{struct_liam_1_1_key_override_exception_a2dc2e16a5de9202708c69d4c185d2c15}{get}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keyword}{private}:}
+\DoxyCodeLine{42         std::string \mbox{\hyperlink{struct_liam_1_1_key_override_exception_a77d964c0a3f780e5006e55e061328c52}{message}};}
+\DoxyCodeLine{43     \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{50     \textcolor{keyword}{class }\mbox{\hyperlink{class_liam_1_1_input_engine}{InputEngine}}}
+\DoxyCodeLine{51     \{}
+\DoxyCodeLine{52     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{57         std::unordered\_map<Keycode, std::function<void()>> \mbox{\hyperlink{class_liam_1_1_input_engine_a4b23213543474621411a7a9bb0e6ab64}{m\_keyDownDelegates}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63         std::unordered\_map<Keycode, std::function<void()>> \mbox{\hyperlink{class_liam_1_1_input_engine_a164d03e38004cbffed776055ed0bcb1e}{m\_keyUpDelegates}};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{70         \mbox{\hyperlink{class_liam_1_1_input_engine_ac46a3e0d95e77be7ae20e691c49a07f0}{InputEngine}}();}
+\DoxyCodeLine{75         \textcolor{keyword}{static} \mbox{\hyperlink{class_liam_1_1_input_engine}{InputEngine}}* \mbox{\hyperlink{class_liam_1_1_input_engine_af4b9336971f0ca72393f20f59fadea81}{s\_pInstance}};}
+\DoxyCodeLine{76     \textcolor{keyword}{public}:}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{83         \mbox{\hyperlink{class_liam_1_1_input_engine_a3f14bf9e5fe13106512f1ad786e3f63c}{\string~InputEngine}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{88         \mbox{\hyperlink{class_liam_1_1_input_engine_a2ff40d6825041e26c8dfc54d8a4ed186}{InputEngine}}(\mbox{\hyperlink{class_liam_1_1_input_engine}{InputEngine}}\& rhs) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{93         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_liam_1_1_input_engine_acd5900e64873dace45ebb0fbc321797e}{operator=}}(\mbox{\hyperlink{class_liam_1_1_input_engine}{InputEngine}}\& rhs) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98         \textcolor{keyword}{static} \mbox{\hyperlink{class_liam_1_1_input_engine}{InputEngine}}* \mbox{\hyperlink{class_liam_1_1_input_engine_a02a0fadb6c578096bdccbd087594c3a4}{GetInstance}}();}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{106         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_liam_1_1_input_engine_afc13450d1460ffd426f156b72d2d6946}{AddKeyDownListener}}(Keycode param1, \textcolor{keywordtype}{void}(*callback)());}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{115         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_liam_1_1_input_engine_a8582915e89d9af776829bf63dafc5166}{AddKeyUpListener}}(Keycode param1, \textcolor{keywordtype}{void}(*callback)());}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 }
+\DoxyCodeLine{123         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_liam_1_1_input_engine_a129663edd7662a56163c70b8f0bd2fa6}{RemoveInputListener}}(Keycode param1);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 }
+\DoxyCodeLine{133         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_liam_1_1_input_engine_aac6c0eb1cc2407d66915cc09c1161506}{PollEvents}}(\textcolor{keyword}{const} KeyboardEvent\& evt);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \};}
+\DoxyCodeLine{136 \}}
+
+\end{DoxyCode}

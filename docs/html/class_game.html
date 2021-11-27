@@ -96,8 +96,11 @@ $(document).ready(function(){initNavTree('class_game.html',''); initResizable();
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_game-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Game Class Reference</div></div>
 </div><!--header-->
@@ -119,13 +122,11 @@ Public Types</h2></td></tr>
 <tr class="memitem:ad5f541514e0ffdcdc94d527f6ebacc75"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad5f541514e0ffdcdc94d527f6ebacc75">MeshType</a> { <a class="el" href="class_game.html#ad5f541514e0ffdcdc94d527f6ebacc75aa296104f0c61a9cf39f4824d05315e12">Cube</a>
 , <a class="el" href="class_game.html#ad5f541514e0ffdcdc94d527f6ebacc75a0d3adee051531c15b3509b4d4d75ce7b">Plane</a>
  }</td></tr>
+<tr class="memdesc:ad5f541514e0ffdcdc94d527f6ebacc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">MeshType.  <a href="class_game.html#ad5f541514e0ffdcdc94d527f6ebacc75">More...</a><br /></td></tr>
 <tr class="separator:ad5f541514e0ffdcdc94d527f6ebacc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad59df6562a58a614fda24622d3715b65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
-<tr class="memdesc:ad59df6562a58a614fda24622d3715b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_game.html#ad59df6562a58a614fda24622d3715b65">More...</a><br /></td></tr>
-<tr class="separator:ad59df6562a58a614fda24622d3715b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72772b628443c3675976d6b5e6c9ec2a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a72772b628443c3675976d6b5e6c9ec2a">~Game</a> ()</td></tr>
 <tr class="memdesc:a72772b628443c3675976d6b5e6c9ec2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Destructor.  <a href="class_game.html#a72772b628443c3675976d6b5e6c9ec2a">More...</a><br /></td></tr>
 <tr class="separator:a72772b628443c3675976d6b5e6c9ec2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2ba00c3475d222573e5ad54b88b389b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when a key is pressed  <a href="class_game.html#a2ba00c3475d222573e5ad54b88b389b7">More...</a><br /></td></tr>
 <tr class="separator:a2ba00c3475d222573e5ad54b88b389b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a495b7d5ab243a04b0c5fc5e28c4f73b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a495b7d5ab243a04b0c5fc5e28c4f73b4">keyReleased</a> (const KeyboardEvent &amp;evt)</td></tr>
+<tr class="memdesc:a495b7d5ab243a04b0c5fc5e28c4f73b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">keyReleased  <a href="class_game.html#a495b7d5ab243a04b0c5fc5e28c4f73b4">More...</a><br /></td></tr>
 <tr class="separator:a495b7d5ab243a04b0c5fc5e28c4f73b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a6a232da68068e26aa9e6ab802ebf1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#af4a6a232da68068e26aa9e6ab802ebf1">frameRenderingQueued</a> (const FrameEvent &amp;evt)</td></tr>
 <tr class="memdesc:af4a6a232da68068e26aa9e6ab802ebf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once per tick  <a href="class_game.html#af4a6a232da68068e26aa9e6ab802ebf1">More...</a><br /></td></tr>
@@ -146,10 +148,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a36b9393a1cc0ae239d2c897f7caa3227"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a36b9393a1cc0ae239d2c897f7caa3227">mouseMoved</a> (const MouseMotionEvent &amp;evt) override</td></tr>
 <tr class="memdesc:a36b9393a1cc0ae239d2c897f7caa3227"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when the mouse is moved  <a href="class_game.html#a36b9393a1cc0ae239d2c897f7caa3227">More...</a><br /></td></tr>
 <tr class="separator:a36b9393a1cc0ae239d2c897f7caa3227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbeac451d3a577550dc459e2cc1e64c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a3fbeac451d3a577550dc459e2cc1e64c">IncrementScore</a> (int by=1)</td></tr>
+<tr class="memdesc:a3fbeac451d3a577550dc459e2cc1e64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">IncrementScore.  <a href="class_game.html#a3fbeac451d3a577550dc459e2cc1e64c">More...</a><br /></td></tr>
+<tr class="separator:a3fbeac451d3a577550dc459e2cc1e64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d75176a4ce3329091b219743ccaeeb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a8d75176a4ce3329091b219743ccaeeb5">DecrementLives</a> ()</td></tr>
+<tr class="memdesc:a8d75176a4ce3329091b219743ccaeeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DecrementLives.  <a href="class_game.html#a8d75176a4ce3329091b219743ccaeeb5">More...</a><br /></td></tr>
+<tr class="separator:a8d75176a4ce3329091b219743ccaeeb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc88a7ba66e01dfcfcd67e6695bb1b6c"><td class="memItemLeft" align="right" valign="top">ManualObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#abc88a7ba66e01dfcfcd67e6695bb1b6c">createMesh</a> (<a class="el" href="class_game.html#ad5f541514e0ffdcdc94d527f6ebacc75">MeshType</a> meshType, const char *name, const char *matName, Ogre::Vector2 uvMap)</td></tr>
+<tr class="memdesc:abc88a7ba66e01dfcfcd67e6695bb1b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">IncrementScore.  <a href="class_game.html#abc88a7ba66e01dfcfcd67e6695bb1b6c">More...</a><br /></td></tr>
 <tr class="separator:abc88a7ba66e01dfcfcd67e6695bb1b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d3eacbfeecbc48f1cf3cec8045bb40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a00d3eacbfeecbc48f1cf3cec8045bb40">addVertex</a> (ManualObject *meshRef, Ogre::Vector3 pos, Ogre::Vector3 col, Ogre::Vector2 uv)</td></tr>
+<tr class="memdesc:a00d3eacbfeecbc48f1cf3cec8045bb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">addVertex  <a href="class_game.html#a00d3eacbfeecbc48f1cf3cec8045bb40">More...</a><br /></td></tr>
 <tr class="separator:a00d3eacbfeecbc48f1cf3cec8045bb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec2c90c5102f327cd4d1d07552fccfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a7ec2c90c5102f327cd4d1d07552fccfd">SetGameOver</a> (bool paused, <a class="el" href="_game_8h.html#a0bffae93324ed69979bdd0ab90df7227">GameOutcome</a> outcome)</td></tr>
+<tr class="memdesc:a7ec2c90c5102f327cd4d1d07552fccfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetGameOver.  <a href="class_game.html#a7ec2c90c5102f327cd4d1d07552fccfd">More...</a><br /></td></tr>
+<tr class="separator:a7ec2c90c5102f327cd4d1d07552fccfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bceff3899e44c1fa7665803c8ab6004"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a3bceff3899e44c1fa7665803c8ab6004">getIsPaused</a> () const</td></tr>
+<tr class="memdesc:a3bceff3899e44c1fa7665803c8ab6004"><td class="mdescLeft">&#160;</td><td class="mdescRight">getIsPaused  <a href="class_game.html#a3bceff3899e44c1fa7665803c8ab6004">More...</a><br /></td></tr>
+<tr class="separator:a3bceff3899e44c1fa7665803c8ab6004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4c7987f969d4adac41ec53e484d0c80d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a4c7987f969d4adac41ec53e484d0c80d">OnAKeyDown</a> ()</td></tr>
+<tr class="memdesc:a4c7987f969d4adac41ec53e484d0c80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnAKeyDown.  <a href="class_game.html#a4c7987f969d4adac41ec53e484d0c80d">More...</a><br /></td></tr>
+<tr class="separator:a4c7987f969d4adac41ec53e484d0c80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a362a68ca418c82f654792911fcd36f05"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a362a68ca418c82f654792911fcd36f05">OnDKeyDown</a> ()</td></tr>
+<tr class="memdesc:a362a68ca418c82f654792911fcd36f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnDKeyDown.  <a href="class_game.html#a362a68ca418c82f654792911fcd36f05">More...</a><br /></td></tr>
+<tr class="separator:a362a68ca418c82f654792911fcd36f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ee850fc9c3af5373a60ea26c2e6700"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a69ee850fc9c3af5373a60ea26c2e6700">QuitGame</a> ()</td></tr>
+<tr class="memdesc:a69ee850fc9c3af5373a60ea26c2e6700"><td class="mdescLeft">&#160;</td><td class="mdescRight">QuitGame.  <a href="class_game.html#a69ee850fc9c3af5373a60ea26c2e6700">More...</a><br /></td></tr>
+<tr class="separator:a69ee850fc9c3af5373a60ea26c2e6700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa989d3cee96d5ae093663bf62dea57e2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aa989d3cee96d5ae093663bf62dea57e2">GetInstance</a> ()</td></tr>
+<tr class="memdesc:aa989d3cee96d5ae093663bf62dea57e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetInstance.  <a href="class_game.html#aa989d3cee96d5ae093663bf62dea57e2">More...</a><br /></td></tr>
+<tr class="separator:aa989d3cee96d5ae093663bf62dea57e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -168,27 +199,44 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac280e6f5ffa9ffac1afcc4a8a391eb8f"><td class="memItemLeft" align="right" valign="top">OgreBites::Label *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ac280e6f5ffa9ffac1afcc4a8a391eb8f">m_mspfLabel</a></td></tr>
 <tr class="memdesc:ac280e6f5ffa9ffac1afcc4a8a391eb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphic User Interface label used as the framerate.  <a href="class_game.html#ac280e6f5ffa9ffac1afcc4a8a391eb8f">More...</a><br /></td></tr>
 <tr class="separator:ac280e6f5ffa9ffac1afcc4a8a391eb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6953aa8d5e14f717c32271d6b1ef36d2"><td class="memItemLeft" align="right" valign="top">OgreBites::Label *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a6953aa8d5e14f717c32271d6b1ef36d2">m_myLabel</a></td></tr>
-<tr class="memdesc:a6953aa8d5e14f717c32271d6b1ef36d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphic User Interface label used as milliseconds per frame.  <a href="class_game.html#a6953aa8d5e14f717c32271d6b1ef36d2">More...</a><br /></td></tr>
-<tr class="separator:a6953aa8d5e14f717c32271d6b1ef36d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b36a6e0095dbfc7a0970df7c11c0cfd"><td class="memItemLeft" align="right" valign="top">OgreBites::Label *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a3b36a6e0095dbfc7a0970df7c11c0cfd">m_winLabel</a></td></tr>
+<tr class="memdesc:a3b36a6e0095dbfc7a0970df7c11c0cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphic User Interface label used as milliseconds per frame.  <a href="class_game.html#a3b36a6e0095dbfc7a0970df7c11c0cfd">More...</a><br /></td></tr>
+<tr class="separator:a3b36a6e0095dbfc7a0970df7c11c0cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a050565826e96098323e6dbba91d1fc02"><td class="memItemLeft" align="right" valign="top">OgreBites::Label *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a050565826e96098323e6dbba91d1fc02">m_gameOverLabel</a></td></tr>
-<tr class="memdesc:a050565826e96098323e6dbba91d1fc02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphic User Interface label used as the engine header.  <a href="class_game.html#a050565826e96098323e6dbba91d1fc02">More...</a><br /></td></tr>
+<tr class="memdesc:a050565826e96098323e6dbba91d1fc02"><td class="mdescLeft">&#160;</td><td class="mdescRight">game over label when the doodle loses the game  <a href="class_game.html#a050565826e96098323e6dbba91d1fc02">More...</a><br /></td></tr>
 <tr class="separator:a050565826e96098323e6dbba91d1fc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df3c171d63dd990ec0460891dab422d"><td class="memItemLeft" align="right" valign="top">OgreBites::TrayManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a4df3c171d63dd990ec0460891dab422d">mTrayMgr</a></td></tr>
-<tr class="memdesc:a4df3c171d63dd990ec0460891dab422d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphic User Interface label used when you lose all lives.  <a href="class_game.html#a4df3c171d63dd990ec0460891dab422d">More...</a><br /></td></tr>
+<tr class="memdesc:a4df3c171d63dd990ec0460891dab422d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tray manager for handling all onscreen UI.  <a href="class_game.html#a4df3c171d63dd990ec0460891dab422d">More...</a><br /></td></tr>
 <tr class="separator:a4df3c171d63dd990ec0460891dab422d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2072a1336b65b1ffbb33bf21c42f03e1"><td class="memItemLeft" align="right" valign="top">OgreBites::Button *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2072a1336b65b1ffbb33bf21c42f03e1">m_quitBtn</a> = nullptr</td></tr>
 <tr class="memdesc:a2072a1336b65b1ffbb33bf21c42f03e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphic User Interface button used to quit the game if you lose the game.  <a href="class_game.html#a2072a1336b65b1ffbb33bf21c42f03e1">More...</a><br /></td></tr>
 <tr class="separator:a2072a1336b65b1ffbb33bf21c42f03e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94cf712267d1cf770dff92dbe5a4c11d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_game_object.html">GameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a94cf712267d1cf770dff92dbe5a4c11d">m_doodle</a></td></tr>
+<tr class="memdesc:a94cf712267d1cf770dff92dbe5a4c11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">reference to the doodle  <a href="class_game.html#a94cf712267d1cf770dff92dbe5a4c11d">More...</a><br /></td></tr>
 <tr class="separator:a94cf712267d1cf770dff92dbe5a4c11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f818284846cdd8af4f201ffaa2fc152"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_game_object.html">GameObject</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2f818284846cdd8af4f201ffaa2fc152">m_platforms</a></td></tr>
+<tr class="memdesc:a2f818284846cdd8af4f201ffaa2fc152"><td class="mdescLeft">&#160;</td><td class="mdescRight">a vector of references of all the platforms in the scene  <a href="class_game.html#a2f818284846cdd8af4f201ffaa2fc152">More...</a><br /></td></tr>
 <tr class="separator:a2f818284846cdd8af4f201ffaa2fc152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaca459451333a3e9e2d8b9d1b430ab1"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#adaca459451333a3e9e2d8b9d1b430ab1">MAX_PLATFORMS</a> = 36</td></tr>
+<tr class="memdesc:adaca459451333a3e9e2d8b9d1b430ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of platforms to draw  <a href="class_game.html#adaca459451333a3e9e2d8b9d1b430ab1">More...</a><br /></td></tr>
+<tr class="separator:adaca459451333a3e9e2d8b9d1b430ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37cab82ace5f0b4fe02c784dc93564bd"><td class="memItemLeft" align="right" valign="top">SceneNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a37cab82ace5f0b4fe02c784dc93564bd">camNode</a></td></tr>
+<tr class="memdesc:a37cab82ace5f0b4fe02c784dc93564bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera node (depended on <a class="el" href="class_doodle.html" title="Doodle.">Doodle</a> class)  <a href="class_game.html#a37cab82ace5f0b4fe02c784dc93564bd">More...</a><br /></td></tr>
+<tr class="separator:a37cab82ace5f0b4fe02c784dc93564bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad59df6562a58a614fda24622d3715b65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
+<tr class="memdesc:ad59df6562a58a614fda24622d3715b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_game.html#ad59df6562a58a614fda24622d3715b65">More...</a><br /></td></tr>
+<tr class="separator:ad59df6562a58a614fda24622d3715b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a75207cac8e7ef5a9c08985d3f9615faa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a75207cac8e7ef5a9c08985d3f9615faa">isPaused</a> = false</td></tr>
+<tr class="memdesc:a75207cac8e7ef5a9c08985d3f9615faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the game paused  <a href="class_game.html#a75207cac8e7ef5a9c08985d3f9615faa">More...</a><br /></td></tr>
+<tr class="separator:a75207cac8e7ef5a9c08985d3f9615faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad28961d6ad5f6ca5d25b3646d485a9b8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad28961d6ad5f6ca5d25b3646d485a9b8">aspectX</a> = 325.0f</td></tr>
-<tr class="memdesc:ad28961d6ad5f6ca5d25b3646d485a9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reference to the ball.  <a href="class_game.html#ad28961d6ad5f6ca5d25b3646d485a9b8">More...</a><br /></td></tr>
+<tr class="memdesc:ad28961d6ad5f6ca5d25b3646d485a9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">aspect ratio x  <a href="class_game.html#ad28961d6ad5f6ca5d25b3646d485a9b8">More...</a><br /></td></tr>
 <tr class="separator:ad28961d6ad5f6ca5d25b3646d485a9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcf809946362e8483251d326850493ac"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#adcf809946362e8483251d326850493ac">aspectY</a> = 243.0f</td></tr>
 <tr class="memdesc:adcf809946362e8483251d326850493ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">aspect ratio y  <a href="class_game.html#adcf809946362e8483251d326850493ac">More...</a><br /></td></tr>
@@ -214,23 +262,27 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ad46cc58e640c32bb6438f140c5903fab"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad46cc58e640c32bb6438f140c5903fab">buffer</a> [50]</td></tr>
 <tr class="memdesc:ad46cc58e640c32bb6438f140c5903fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">character stream for setting the captions for all GUI elements (see the various Labels used in <a class="el" href="class_game.html" title="Game class.">Game</a> class)  <a href="class_game.html#ad46cc58e640c32bb6438f140c5903fab">More...</a><br /></td></tr>
 <tr class="separator:ad46cc58e640c32bb6438f140c5903fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad66e2f44bebad41743ea8f44a8778a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aad66e2f44bebad41743ea8f44a8778a5">gameover</a> = false</td></tr>
-<tr class="memdesc:aad66e2f44bebad41743ea8f44a8778a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to true when the ball first collides with the paddle  <a href="class_game.html#aad66e2f44bebad41743ea8f44a8778a5">More...</a><br /></td></tr>
-<tr class="separator:aad66e2f44bebad41743ea8f44a8778a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec79e7e26247ccdf0556137e540ac58"><td class="memItemLeft" align="right" valign="top">SceneManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#adec79e7e26247ccdf0556137e540ac58">scnMgr</a></td></tr>
+<tr class="memdesc:adec79e7e26247ccdf0556137e540ac58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scene manager for creating the scene.  <a href="class_game.html#adec79e7e26247ccdf0556137e540ac58">More...</a><br /></td></tr>
 <tr class="separator:adec79e7e26247ccdf0556137e540ac58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacecda78ea5b9e76eaf53f511addd514"><td class="memItemLeft" align="right" valign="top">Root *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aacecda78ea5b9e76eaf53f511addd514">root</a></td></tr>
+<tr class="memdesc:aacecda78ea5b9e76eaf53f511addd514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root for various ogre functions such as queueEndRendering()  <a href="class_game.html#aacecda78ea5b9e76eaf53f511addd514">More...</a><br /></td></tr>
 <tr class="separator:aacecda78ea5b9e76eaf53f511addd514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28ccd7e623832c0954e2f239dc722b57"><td class="memItemLeft" align="right" valign="top">Ogre::Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a28ccd7e623832c0954e2f239dc722b57">vel</a></td></tr>
+<tr class="memdesc:a28ccd7e623832c0954e2f239dc722b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input from A and D keys.  <a href="class_game.html#a28ccd7e623832c0954e2f239dc722b57">More...</a><br /></td></tr>
 <tr class="separator:a28ccd7e623832c0954e2f239dc722b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37cab82ace5f0b4fe02c784dc93564bd"><td class="memItemLeft" align="right" valign="top">SceneNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a37cab82ace5f0b4fe02c784dc93564bd">camNode</a></td></tr>
-<tr class="separator:a37cab82ace5f0b4fe02c784dc93564bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a2d22a6286d4b5a9565ab5109a7877935"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2d22a6286d4b5a9565ab5109a7877935">s_pInstance</a> = nullptr</td></tr>
+<tr class="memdesc:a2d22a6286d4b5a9565ab5109a7877935"><td class="mdescLeft">&#160;</td><td class="mdescRight">our singleton instance  <a href="class_game.html#a2d22a6286d4b5a9565ab5109a7877935">More...</a><br /></td></tr>
+<tr class="separator:a2d22a6286d4b5a9565ab5109a7877935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_game.html" title="Game class.">Game</a> class. </p>
-<p >Main base class, inherits from Application Listener and Input Listener. Any type of keyboard/mouse event based entities should be done from here </p><dl class="section see"><dt>See also</dt><dd>Bat </dd>
+<p >Main base class, inherits from Application Listener and Input Listener. Any type of keyboard/mouse event based entities should be done from here </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_doodle.html" title="Doodle.">Doodle</a> </dd>
 <dd>
-Ball </dd></dl>
+<a class="el" href="class_platform.html" title="Platform.">Platform</a> </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ad5f541514e0ffdcdc94d527f6ebacc75" name="ad5f541514e0ffdcdc94d527f6ebacc75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5f541514e0ffdcdc94d527f6ebacc75">&#9670;&nbsp;</a></span>MeshType</h2>
@@ -251,6 +303,9 @@ Ball </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>MeshType. </p>
+<p >Entity type for this object (cube or plane) </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad5f541514e0ffdcdc94d527f6ebacc75aa296104f0c61a9cf39f4824d05315e12" name="ad5f541514e0ffdcdc94d527f6ebacc75aa296104f0c61a9cf39f4824d05315e12"></a>Cube&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad5f541514e0ffdcdc94d527f6ebacc75a0d3adee051531c15b3509b4d4d75ce7b" name="ad5f541514e0ffdcdc94d527f6ebacc75a0d3adee051531c15b3509b4d4d75ce7b"></a>Plane&#160;</td><td class="fielddoc"></td></tr>
@@ -259,26 +314,6 @@ Ball </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad59df6562a58a614fda24622d3715b65" name="ad59df6562a58a614fda24622d3715b65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad59df6562a58a614fda24622d3715b65">&#9670;&nbsp;</a></span>Game()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Game::Game </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<p >called in <a class="el" href="main_8cpp.html">main.cpp</a> </p>
-
-</div>
-</div>
 <a id="a72772b628443c3675976d6b5e6c9ec2a" name="a72772b628443c3675976d6b5e6c9ec2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a72772b628443c3675976d6b5e6c9ec2a">&#9670;&nbsp;</a></span>~Game()</h2>
 
@@ -304,6 +339,34 @@ Ball </dd></dl>
 
 <p>Virtual Destructor. </p>
 <p >called after application quits </p>
+
+</div>
+</div>
+<a id="ad59df6562a58a614fda24622d3715b65" name="ad59df6562a58a614fda24622d3715b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad59df6562a58a614fda24622d3715b65">&#9670;&nbsp;</a></span>Game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Game::Game </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p >called in <a class="el" href="main_8cpp.html">main.cpp</a> </p>
 
 </div>
 </div>
@@ -346,6 +409,18 @@ Ball </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>addVertex </p>
+<p >Adds a vertex to a mesh </p><dl class="section return"><dt>Returns</dt><dd>no return type </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(meshRef)</td><td>mesh reference </td></tr>
+    <tr><td class="paramname">(pos)</td><td>vertex position </td></tr>
+    <tr><td class="paramname">(col)</td><td>colour of the vertex </td></tr>
+    <tr><td class="paramname">(uv)</td><td>uv scaling </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="abc88a7ba66e01dfcfcd67e6695bb1b6c" name="abc88a7ba66e01dfcfcd67e6695bb1b6c"></a>
@@ -386,6 +461,44 @@ Ball </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>IncrementScore. </p>
+<p >Increases the score by (by) </p><dl class="section return"><dt>Returns</dt><dd>ManualObject </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(meshType)</td><td>the mesh type </td></tr>
+    <tr><td class="paramname">(name)</td><td>the name of the mesh </td></tr>
+    <tr><td class="paramname">(matName)</td><td>the material name </td></tr>
+    <tr><td class="paramname">(uvMap)</td><td>uv scaling </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8d75176a4ce3329091b219743ccaeeb5" name="a8d75176a4ce3329091b219743ccaeeb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d75176a4ce3329091b219743ccaeeb5">&#9670;&nbsp;</a></span>DecrementLives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Game::DecrementLives </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DecrementLives. </p>
+<p >Decrements the lives by 1 </p><dl class="section return"><dt>Returns</dt><dd>lives </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no</td><td>parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="af4a6a232da68068e26aa9e6ab802ebf1" name="af4a6a232da68068e26aa9e6ab802ebf1"></a>
@@ -409,6 +522,93 @@ Ball </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">evt</td><td>reference to frame event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa989d3cee96d5ae093663bf62dea57e2" name="aa989d3cee96d5ae093663bf62dea57e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa989d3cee96d5ae093663bf62dea57e2">&#9670;&nbsp;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game.html">Game</a> * Game::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GetInstance. </p>
+<p >gets the game instance </p><dl class="section return"><dt>Returns</dt><dd>the singleton instance </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no</td><td>parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3bceff3899e44c1fa7665803c8ab6004" name="a3bceff3899e44c1fa7665803c8ab6004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bceff3899e44c1fa7665803c8ab6004">&#9670;&nbsp;</a></span>getIsPaused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Game::getIsPaused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getIsPaused </p>
+<p >Decrements the lives by 1 </p><dl class="section return"><dt>Returns</dt><dd>is the game paused </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no</td><td>parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3fbeac451d3a577550dc459e2cc1e64c" name="a3fbeac451d3a577550dc459e2cc1e64c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fbeac451d3a577550dc459e2cc1e64c">&#9670;&nbsp;</a></span>IncrementScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Game::IncrementScore </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>by</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IncrementScore. </p>
+<p >Increases the score by (by) </p><dl class="section return"><dt>Returns</dt><dd>score </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(by)</td><td>increment the score by this amount </td></tr>
   </table>
   </dd>
 </dl>
@@ -458,6 +658,15 @@ Ball </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>keyReleased </p>
+<p >called when a key is released </p><dl class="section return"><dt>Returns</dt><dd>boolean always true </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>reference to keyboard event </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a36b9393a1cc0ae239d2c897f7caa3227" name="a36b9393a1cc0ae239d2c897f7caa3227"></a>
@@ -495,6 +704,109 @@ Ball </dd></dl>
 
 </div>
 </div>
+<a id="a4c7987f969d4adac41ec53e484d0c80d" name="a4c7987f969d4adac41ec53e484d0c80d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7987f969d4adac41ec53e484d0c80d">&#9670;&nbsp;</a></span>OnAKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::OnAKeyDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OnAKeyDown. </p>
+<p >Decrements the lives by 1 </p><dl class="section return"><dt>Returns</dt><dd>lives </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(paused)</td><td>should the game be paused </td></tr>
+    <tr><td class="paramname">(outcome)</td><td>determine if if its a win or loss </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a362a68ca418c82f654792911fcd36f05" name="a362a68ca418c82f654792911fcd36f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362a68ca418c82f654792911fcd36f05">&#9670;&nbsp;</a></span>OnDKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::OnDKeyDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OnDKeyDown. </p>
+<p >Decrements the lives by 1 </p><dl class="section return"><dt>Returns</dt><dd>no returns </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no</td><td>parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a69ee850fc9c3af5373a60ea26c2e6700" name="a69ee850fc9c3af5373a60ea26c2e6700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ee850fc9c3af5373a60ea26c2e6700">&#9670;&nbsp;</a></span>QuitGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::QuitGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>QuitGame. </p>
+<p >Decrements the lives by 1 </p><dl class="section return"><dt>Returns</dt><dd>no returns </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no</td><td>parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3f8b551a1a7d92fb19ddeb9674919a74" name="a3f8b551a1a7d92fb19ddeb9674919a74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f8b551a1a7d92fb19ddeb9674919a74">&#9670;&nbsp;</a></span>refreshUserInterface()</h2>
 
@@ -516,6 +828,44 @@ Ball </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">no</td><td>parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7ec2c90c5102f327cd4d1d07552fccfd" name="a7ec2c90c5102f327cd4d1d07552fccfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec2c90c5102f327cd4d1d07552fccfd">&#9670;&nbsp;</a></span>SetGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::SetGameOver </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>paused</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_game_8h.html#a0bffae93324ed69979bdd0ab90df7227">GameOutcome</a>&#160;</td>
+          <td class="paramname"><em>outcome</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SetGameOver. </p>
+<p >Decrements the lives by 1 </p><dl class="section return"><dt>Returns</dt><dd>lives </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">(paused)</td><td>should the game be paused </td></tr>
+    <tr><td class="paramname">(outcome)</td><td>determine if if its a win or loss </td></tr>
   </table>
   </dd>
 </dl>
@@ -575,9 +925,8 @@ Ball </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>A reference to the ball. </p>
-<dl class="section see"><dt>See also</dt><dd>Bat</dd></dl>
-<p>aspect ratio x </p><dl class="section note"><dt>Note</dt><dd>This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for </dd></dl>
+<p>aspect ratio x </p>
+<dl class="section note"><dt>Note</dt><dd>This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for </dd></dl>
 
 </div>
 </div>
@@ -636,25 +985,19 @@ Ball </dd></dl>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SceneNode* Game::camNode</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Camera node (depended on <a class="el" href="class_doodle.html" title="Doodle.">Doodle</a> class) </p>
 
 </div>
 </div>
-<a id="aad66e2f44bebad41743ea8f44a8778a5" name="aad66e2f44bebad41743ea8f44a8778a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad66e2f44bebad41743ea8f44a8778a5">&#9670;&nbsp;</a></span>gameover</h2>
+<a id="a75207cac8e7ef5a9c08985d3f9615faa" name="a75207cac8e7ef5a9c08985d3f9615faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75207cac8e7ef5a9c08985d3f9615faa">&#9670;&nbsp;</a></span>isPaused</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -663,7 +1006,7 @@ Ball </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Game::gameover = false</td>
+          <td class="memname">bool Game::isPaused = false</td>
         </tr>
       </table>
   </td>
@@ -673,9 +1016,7 @@ Ball </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>set to true when the ball first collides with the paddle </p>
-<dl class="section note"><dt>Note</dt><dd>This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for</dd></dl>
-<p>set to true when you lose all lives </p><dl class="section note"><dt>Note</dt><dd>This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for </dd></dl>
+<p>is the game paused </p>
 
 </div>
 </div>
@@ -741,6 +1082,9 @@ Ball </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>reference to the doodle </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_doodle.html" title="Doodle.">Doodle</a> </dd></dl>
+
 </div>
 </div>
 <a id="aa833da943e0bdc43023e27faea9c03b4" name="aa833da943e0bdc43023e27faea9c03b4"></a>
@@ -771,7 +1115,7 @@ Ball </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Graphic User Interface label used as the engine header. </p>
+<p>game over label when the doodle loses the game </p>
 
 </div>
 </div>
@@ -807,22 +1151,6 @@ Ball </dd></dl>
 
 </div>
 </div>
-<a id="a6953aa8d5e14f717c32271d6b1ef36d2" name="a6953aa8d5e14f717c32271d6b1ef36d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6953aa8d5e14f717c32271d6b1ef36d2">&#9670;&nbsp;</a></span>m_myLabel</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">OgreBites::Label* Game::m_myLabel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Graphic User Interface label used as milliseconds per frame. </p>
-
-</div>
-</div>
 <a id="a2f818284846cdd8af4f201ffaa2fc152" name="a2f818284846cdd8af4f201ffaa2fc152"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f818284846cdd8af4f201ffaa2fc152">&#9670;&nbsp;</a></span>m_platforms</h2>
 
@@ -834,6 +1162,9 @@ Ball </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>a vector of references of all the platforms in the scene </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_platform.html" title="Platform.">Platform</a> </dd></dl>
 
 </div>
 </div>
@@ -894,6 +1225,39 @@ Ball </dd></dl>
 
 </div>
 </div>
+<a id="a3b36a6e0095dbfc7a0970df7c11c0cfd" name="a3b36a6e0095dbfc7a0970df7c11c0cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b36a6e0095dbfc7a0970df7c11c0cfd">&#9670;&nbsp;</a></span>m_winLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OgreBites::Label* Game::m_winLabel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Graphic User Interface label used as milliseconds per frame. </p>
+<p >Win label when the doodle wins the game </p>
+
+</div>
+</div>
+<a id="adaca459451333a3e9e2d8b9d1b430ab1" name="adaca459451333a3e9e2d8b9d1b430ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaca459451333a3e9e2d8b9d1b430ab1">&#9670;&nbsp;</a></span>MAX_PLATFORMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Game::MAX_PLATFORMS = 36</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of platforms to draw </p>
+
+</div>
+</div>
 <a id="a4df3c171d63dd990ec0460891dab422d" name="a4df3c171d63dd990ec0460891dab422d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4df3c171d63dd990ec0460891dab422d">&#9670;&nbsp;</a></span>mTrayMgr</h2>
 
@@ -906,7 +1270,7 @@ Ball </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Graphic User Interface label used when you lose all lives. </p>
+<p>Tray manager for handling all onscreen UI. </p>
 
 </div>
 </div>
@@ -972,6 +1336,32 @@ Ball </dd></dl>
 </table>
 </div><div class="memdoc">
 
+<p>Root for various ogre functions such as queueEndRendering() </p>
+
+</div>
+</div>
+<a id="a2d22a6286d4b5a9565ab5109a7877935" name="a2d22a6286d4b5a9565ab5109a7877935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d22a6286d4b5a9565ab5109a7877935">&#9670;&nbsp;</a></span>s_pInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game.html">Game</a> * Game::s_pInstance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>our singleton instance </p>
+
 </div>
 </div>
 <a id="adec79e7e26247ccdf0556137e540ac58" name="adec79e7e26247ccdf0556137e540ac58"></a>
@@ -993,6 +1383,8 @@ Ball </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Scene manager for creating the scene. </p>
 
 </div>
 </div>
@@ -1065,6 +1457,8 @@ Ball </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Input from A and D keys. </p>
 
 </div>
 </div>

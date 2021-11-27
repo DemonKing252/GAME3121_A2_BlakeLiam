@@ -9,42 +9,51 @@
 \DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}OgreRTShaderSystem.h"{}}}
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}OgreTrays.h"{}}}
 \DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{keyword}{enum class} \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} }
-\DoxyCodeLine{9 \{}
-\DoxyCodeLine{10     \mbox{\hyperlink{class_doodle}{Doodle}} = 0,}
-\DoxyCodeLine{11     \mbox{\hyperlink{class_platform}{Platform}} = 1,}
-\DoxyCodeLine{12 }
-\DoxyCodeLine{13 \};}
-\DoxyCodeLine{14 }
-\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_game_object}{GameObject}}}
-\DoxyCodeLine{16 \{}
-\DoxyCodeLine{17 \textcolor{keyword}{public}:}
-\DoxyCodeLine{18     \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}();}
-\DoxyCodeLine{19     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}{\string~GameObject}}();}
-\DoxyCodeLine{20     }
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_a2fece397b6343682d639f8943f124d0e}{update}}(\textcolor{keywordtype}{float} dt);}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_afbf626795852f40b5ec19fb1e6ebbc74}{setVelocity}}(Ogre::Vector2 vel);}
-\DoxyCodeLine{25     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_a96fb64cae2361d8a64b4abafd823008c}{setPosition}}(Ogre::Vector3 position);}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27     \textcolor{keyword}{virtual} Ogre::Vector2 \mbox{\hyperlink{class_game_object_ab6a3259e42f7daa8b9f73bf4da51042e}{getPosition}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{28 }
-\DoxyCodeLine{29     \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} \mbox{\hyperlink{class_game_object_aa5f10650ee2a5bef523eb889cc6bd0ba}{getType}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_aa70d16c35f13ee08232f11aea03ca77d}{setType}}(\mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} objType);}
+\DoxyCodeLine{11 \textcolor{keyword}{enum class} \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} }
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_doodle}{Doodle}} = 0,}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_platform}{Platform}} = 1,}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}();}
 \DoxyCodeLine{31 }
-\DoxyCodeLine{32     Ogre::AxisAlignedBox \mbox{\hyperlink{class_game_object_a5f1c1022d1f86d426e27e9ff65dacb32}{getAxisAlignedBox}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_acdfbf5333b9f0ec4ca7f58922b79a0b9}{setAxisAlignedBox}}(Ogre::AxisAlignedBox);}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_object_a8c54dbc7dffeea9193b9a83830104639}{IsObjectColliding}}(\mbox{\hyperlink{class_game_object}{GameObject}}* other);}
-\DoxyCodeLine{36 }
-\DoxyCodeLine{37 }
-\DoxyCodeLine{38 \textcolor{keyword}{private}:}
-\DoxyCodeLine{39     \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} \mbox{\hyperlink{class_game_object_a280ab05ffa48cf4d328565f079162e50}{type}};}
-\DoxyCodeLine{40 }
-\DoxyCodeLine{41     Ogre::AxisAlignedBox \mbox{\hyperlink{class_game_object_a8a4de5c4dfff5d954b24cbefee3a002f}{boundingBox}};}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43 \};}
-\DoxyCodeLine{44 }
+\DoxyCodeLine{37     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}{\string~GameObject}}();}
+\DoxyCodeLine{38     }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_a2fece397b6343682d639f8943f124d0e}{update}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_afbf626795852f40b5ec19fb1e6ebbc74}{setVelocity}}(Ogre::Vector2 vel);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{60     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_a96fb64cae2361d8a64b4abafd823008c}{setPosition}}(Ogre::Vector3 position);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{68     \textcolor{keyword}{virtual} Ogre::Vector2 \mbox{\hyperlink{class_game_object_ab6a3259e42f7daa8b9f73bf4da51042e}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{75     \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} \mbox{\hyperlink{class_game_object_aa5f10650ee2a5bef523eb889cc6bd0ba}{getType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_aa70d16c35f13ee08232f11aea03ca77d}{setType}}(\mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} objType);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{89     Ogre::AxisAlignedBox \mbox{\hyperlink{class_game_object_a5f1c1022d1f86d426e27e9ff65dacb32}{getAxisAlignedBox}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_acdfbf5333b9f0ec4ca7f58922b79a0b9}{setAxisAlignedBox}}(Ogre::AxisAlignedBox);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{103     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_object_a8c54dbc7dffeea9193b9a83830104639}{IsObjectColliding}}(\mbox{\hyperlink{class_game_object}{GameObject}}* other);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{110     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_ad5cd6e8fb1e7c6eadef10bf92e26bdce}{setIndex}}(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_object_a1ea012041e00f272ff9d863a144e5df1}{getIndex}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{keyword}{private}:}
+\DoxyCodeLine{123     \mbox{\hyperlink{_game_object_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} \mbox{\hyperlink{class_game_object_a280ab05ffa48cf4d328565f079162e50}{type}};}
+\DoxyCodeLine{128     Ogre::AxisAlignedBox \mbox{\hyperlink{class_game_object_a8a4de5c4dfff5d954b24cbefee3a002f}{boundingBox}};}
+\DoxyCodeLine{132     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_object_a58df4bceb12da06639f3a519ec2d3704}{indexOrder}} = 0;}
+\DoxyCodeLine{133 \};}
+\DoxyCodeLine{134 }
 
 \end{DoxyCode}

@@ -9,7 +9,9 @@
 
 using namespace Ogre;
 using namespace OgreBites;
-
+/// GameOutcome
+/// 
+/// GameOutcome enumerator for determining win/loss
 enum GameOutcome
 {
     Win,
@@ -19,8 +21,8 @@ enum GameOutcome
 /// Game class
 ///
 /// Main base class, inherits from Application Listener and Input Listener. Any type of keyboard/mouse event based entities should be done from here
-/// @see Bat
-/// @see Ball
+/// @see Doodle
+/// @see Platform
 class Game
     : public ApplicationContext
     , public InputListener
@@ -44,6 +46,11 @@ public:
     bool keyPressed(const KeyboardEvent& evt);
 
 
+    /// keyReleased
+    /// 
+    /// called when a key is released
+    /// @returns boolean always true
+    /// @param evt reference to keyboard event
     bool keyReleased(const KeyboardEvent& evt);
 
     /// called once per tick
@@ -66,7 +73,19 @@ public:
     /// @param evt a reference to mouse motion event
     bool mouseMoved(const MouseMotionEvent& evt) override;
 
+
+    /// IncrementScore
+    /// 
+    /// Increases the score by (by)
+    /// @returns score
+    /// @param (by) increment the score by this amount
     int IncrementScore(int by = 1);
+
+    /// DecrementLives
+    /// 
+    /// Decrements the lives by 1
+    /// @returns lives
+    /// @param no parameters
     int DecrementLives();
 
 
@@ -75,14 +94,33 @@ public:
     * @warning You need the tray listener for any type of GUI!
     */
     OgreBites::TrayListener myTrayListener;
-
+    
+    /// MeshType
+    /// 
+    /// Entity type for this object (cube or plane)
     enum class MeshType
     {
         Cube,
         Plane
     };
-
+    /// IncrementScore
+    /// 
+    /// Increases the score by (by)
+    /// @returns ManualObject
+    /// @param (meshType) the mesh type
+    /// @param (name) the name of the mesh
+    /// @param (matName) the material name
+    /// @param (uvMap) uv scaling
     ManualObject* createMesh(MeshType meshType, const char* name, const char* matName, Ogre::Vector2 uvMap);
+    
+    /// addVertex
+    /// 
+    /// Adds a vertex to a mesh
+    /// @returns no return type
+    /// @param (meshRef) mesh reference
+    /// @param (pos) vertex position
+    /// @param (col) colour of the vertex
+    /// @param (uv) uv scaling
     void addVertex(ManualObject* meshRef, Ogre::Vector3 pos, Ogre::Vector3 col, Ogre::Vector2 uv);
     /**
     * @brief Graphic User Interface label used as score
@@ -103,43 +141,107 @@ public:
     /**
     * @brief Graphic User Interface label used as milliseconds per frame
     */
-
+    
+    /**
+    * @brief Win label when the doodle wins the game
+    */
     OgreBites::Label* m_winLabel;
     
+    /**
+    * @brief game over label when the doodle loses the game
+    */
     OgreBites::Label* m_gameOverLabel;
 
+    /**
+    * @brief Tray manager for handling all onscreen UI
+    */
     OgreBites::TrayManager* mTrayMgr;
     /**
     * @brief Graphic User Interface button used to quit the game if you lose the game
     */
     OgreBites::Button* m_quitBtn = nullptr;
 
-    
+    /**
+    * @brief reference to the doodle
+    * @see Doodle
+    */
     std::shared_ptr<GameObject> m_doodle;
+
+    /**
+    * @brief a vector of references of all the platforms in the scene
+    * @see Platform
+    */
     std::vector<std::shared_ptr<GameObject>> m_platforms;
 
+    /// SetGameOver
+    /// 
+    /// Decrements the lives by 1
+    /// @returns lives
+    /// @param (paused) should the game be paused
+    /// @param (outcome) determine if if its a win or loss
     void SetGameOver(bool paused, GameOutcome outcome);
+
+    /// getIsPaused
+    /// 
+    /// Decrements the lives by 1
+    /// @returns is the game paused
+    /// @param no parameters
     bool getIsPaused() const;
 
+    /**
+    * @brief number of platforms to draw
+    */
     const int MAX_PLATFORMS = 36;
 
+    /**
+    * @brief Camera node (depended on Doodle class)
+    */
     SceneNode* camNode;
 
+
+    /// OnAKeyDown
+    /// 
+    /// Decrements the lives by 1
+    /// @returns lives
+    /// @param (paused) should the game be paused
+    /// @param (outcome) determine if if its a win or loss
     static void OnAKeyDown();
+
+
+    /// OnDKeyDown
+    /// 
+    /// Decrements the lives by 1
+    /// @returns no returns
+    /// @param no parameters
     static void OnDKeyDown();
+
+    /// QuitGame
+    /// 
+    /// Decrements the lives by 1
+    /// @returns no returns
+    /// @param no parameters
     static void QuitGame();
 
+    /// GetInstance
+    /// 
+    /// gets the game instance
+    /// @returns the singleton instance
+    /// @param no parameters
     static Game* GetInstance();
 
 private:
-
-    static Game* instance;
+    /**
+    * @brief our singleton instance
+    */
+    static Game* s_pInstance;
 
     /// Constructor
     ///
     /// called in main.cpp
     Game();
-
+    /**
+    * @brief is the game paused
+    */
     bool isPaused = false;
 
     /**
@@ -187,25 +289,19 @@ private:
     * @note This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for
     */
     char buffer[50];
+    
     /**
-    * @brief set to true when the ball first collides with the paddle
-    * @note This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for
+    * @brief Scene manager for creating the scene
     */
-    //bool collisionenter = false;
-    /**
-    * @brief set to true when you lose all lives
-    * @note This variable is used for main game logic, do not modify it unless you want to break the game, or your curious about what its used for
-    */
-
-
-
     SceneManager* scnMgr;
+    /**
+    * @brief Root for various ogre functions such as queueEndRendering()
+    */
     Root* root;
 
-
+    /**
+    * @brief Input from A and D keys
+    */
     Ogre::Vector2 vel;
-
-
-
 
 };

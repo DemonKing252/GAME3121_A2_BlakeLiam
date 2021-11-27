@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['doodle_0',['Doodle',['../class_doodle.html#ad58bab30e6371d862dbdfb368b5140ec',1,'Doodle::Doodle(Ogre::Entity *ballEntity, Ogre::SceneManager *scnMgr, bool useGravity=true, float grav=9.8f)'],['../class_doodle.html#a48b2ce4e023051bdbda64fda966c621f',1,'Doodle::Doodle()']]]
+  ['decrementlives_0',['DecrementLives',['../class_game.html#a8d75176a4ce3329091b219743ccaeeb5',1,'Game']]],
+  ['doodle_1',['Doodle',['../class_doodle.html#a3736171d346a038b05cc69dbb284147c',1,'Doodle::Doodle(Ogre::String name, Ogre::SceneManager *scnMgr, bool useGravity=true, float grav=9.8f)'],['../class_doodle.html#a48b2ce4e023051bdbda64fda966c621f',1,'Doodle::Doodle()']]]
 ];
