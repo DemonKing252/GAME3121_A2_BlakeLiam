@@ -76,7 +76,7 @@ void Doodle::update(float dt)
 	this->setPosition(Ogre::Vector3(position.x, position.y, 0.f));
 }
 
-void Doodle::checkPlatformBounds(GameObject* platformPtr, Game* gamePtr)
+void Doodle::checkPlatformBounds(GameObject* platformPtr)
 {
 	
 	if (!IsObjectColliding(platformPtr))
@@ -85,41 +85,41 @@ void Doodle::checkPlatformBounds(GameObject* platformPtr, Game* gamePtr)
 	// expected to be called when its colling
 	if (velocity.y < 0.f && position.y - getAxisAlignedBox().getHalfSize().y >= platformPtr->getPosition().y + platformPtr->getAxisAlignedBox().getHalfSize().y - 0.2f)
 	{
-		if (platformPtr->getIndex() == gamePtr->MAX_PLATFORMS - 1)
+		if (platformPtr->getIndex() == Game::GetInstance()->MAX_PLATFORMS - 1)
 		{
-			gamePtr->IncrementScore();
-			gamePtr->refreshUserInterface();
-			gamePtr->SetGameOver(true, GameOutcome::Win);
+			Game::GetInstance()->IncrementScore();
+			Game::GetInstance()->refreshUserInterface();
+			Game::GetInstance()->SetGameOver(true, GameOutcome::Win);
 		}
 		else 
 		{
-			gamePtr->IncrementScore();
-			gamePtr->refreshUserInterface();
+			Game::GetInstance()->IncrementScore();
+			Game::GetInstance()->refreshUserInterface();
 			setVelocity(Ogre::Vector2(getVelocity().x, 7.f));
 		}
 	}
 }
 
-void Doodle::checkCameraBounds(Game* gamePtr)
+void Doodle::checkCameraBounds()
 {
 	// Check if were outside the camera bounds
-	if (getPosition().y <= gamePtr->camNode->getPosition().y - 6.0f)
+	if (getPosition().y <= Game::GetInstance()->camNode->getPosition().y - 6.0f)
 	{
-		if (gamePtr->DecrementLives() <= 0)
+		if (Game::GetInstance()->DecrementLives() <= 0)
 		{
-			gamePtr->refreshUserInterface();
-			gamePtr->SetGameOver(true, GameOutcome::Loss);
+			Game::GetInstance()->refreshUserInterface();
+			Game::GetInstance()->SetGameOver(true, GameOutcome::Loss);
 		}
 		else
 		{
-			gamePtr->refreshUserInterface();
-			this->reset(gamePtr);
+			Game::GetInstance()->refreshUserInterface();
+			this->reset();
 		}
 	}
 }
 
-void Doodle::reset(Game* gamePtr)
+void Doodle::reset()
 {
 	this->setVelocity(Ogre::Vector2::ZERO);
-	this->setPosition(gamePtr->camNode->getPosition());
+	this->setPosition(Game::GetInstance()->camNode->getPosition());
 }

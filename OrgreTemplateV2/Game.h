@@ -5,6 +5,7 @@
 #include "GameObject.h"
 #include <memory>
 #include <cassert>
+#include "InputEngine.h"
 
 using namespace Ogre;
 using namespace OgreBites;
@@ -25,10 +26,6 @@ class Game
     , public InputListener
 {
 public:
-    /// Constructor
-    ///
-    /// called in main.cpp
-    Game();
 
     /// Virtual Destructor
     ///
@@ -128,7 +125,20 @@ public:
 
     SceneNode* camNode;
 
+    static void OnAKeyDown();
+    static void OnDKeyDown();
+    static void QuitGame();
+
+    static Game* GetInstance();
+
 private:
+
+    static Game* instance;
+
+    /// Constructor
+    ///
+    /// called in main.cpp
+    Game();
 
     bool isPaused = false;
 
@@ -194,5 +204,8 @@ private:
 
 
     Ogre::Vector2 vel;
+
+
+
 
 };

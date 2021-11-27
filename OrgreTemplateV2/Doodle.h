@@ -102,16 +102,16 @@ public:
 	/// @see Ball::setVelocity(Ogre::Vector2 vel) this method is what gets called after a direction is determined
 	/// @param (dt) time elapsed since previous frame (consider using a frame listener to get delta time!)
 	/// @returns no return type
-	void checkPlatformBounds(GameObject* go, class Game* gamePtr);
+	void checkPlatformBounds(GameObject* go);
 
-	void checkCameraBounds(class Game* gamePtr);
+	void checkCameraBounds();
 
 	/// reset
 	///
 	/// this method is called the moment the ball leaves the boundary. The balls velocity is set to be a random diagonal direction (that is either (1, 1)/(1, -1)/(-1,1)/(-1,-1)
 	/// @param no parameters
 	/// @returns no return type
-	void reset(class Game* gamePtr);
+	void reset();
 
 
 

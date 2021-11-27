@@ -34,7 +34,7 @@ bool Game::frameRenderingQueued(const FrameEvent& evt)
         m_mspfLabel->setCaption(buffer);
     }
     
-    static_cast<Doodle*>(m_doodle.get())->checkCameraBounds(this);
+    static_cast<Doodle*>(m_doodle.get())->checkCameraBounds();
     for (auto go : m_platforms)
     {
         go->update(evt.timeSinceLastFrame);
@@ -42,7 +42,7 @@ bool Game::frameRenderingQueued(const FrameEvent& evt)
         {
             // Safe cast
             // Since we don't have a virtual method in the base class, since our platform doesn't depend on that method
-            static_cast<Doodle*>(m_doodle.get())->checkPlatformBounds(go.get(), this);
+            static_cast<Doodle*>(m_doodle.get())->checkPlatformBounds(go.get());
         }
 
     }
@@ -163,6 +163,29 @@ void Game::SetGameOver(bool paused, GameOutcome outcome)
 bool Game::getIsPaused() const
 {
     return isPaused;
+}
+void Game::OnAKeyDown()
+{
+    Game::GetInstance()->vel = Ogre::Vector2(-5.f, static_cast<Doodle*>(Game::GetInstance()->m_doodle.get())->getVelocity().y);
+    Game::GetInstance()->m_doodle->setVelocity(Game::GetInstance()->vel);
+}
+void Game::OnDKeyDown()
+{
+    Game::GetInstance()->vel = Ogre::Vector2(+5.f, static_cast<Doodle*>(Game::GetInstance()->m_doodle.get())->getVelocity().y);
+    Game::GetInstance()->m_doodle->setVelocity(Game::GetInstance()->vel);
+}
+void Game::QuitGame()
+{
+    Game::GetInstance()->getRoot()->queueEndRendering();
+    Game::GetInstance()->m_doodle->setVelocity(Game::GetInstance()->vel);
+}
+Game* Game::instance = nullptr;
+Game* Game::GetInstance()
+{
+    if (instance == nullptr)
+        instance = new Game();
+
+    return instance;
 }
 void Game::refreshUserInterface()
 {
@@ -313,38 +336,27 @@ void Game::setup()
     camNode->setPosition(0, m_doodle->getPosition().y, 15);
     camNode->lookAt(Ogre::Vector3(0, m_doodle->getPosition().y, 0), Node::TS_WORLD);
 
+
+    // Input engine
+    InputEngine::GetInstance()->AddKeyDownListener('a', Game::OnAKeyDown);
+    InputEngine::GetInstance()->AddKeyDownListener('d', Game::OnDKeyDown);
+
+    InputEngine::GetInstance()->AddKeyDownListener(SDLK_ESCAPE, Game::QuitGame);
+
+
 }
 
 
 bool Game::keyPressed(const KeyboardEvent& evt)
 {
-    if (evt.keysym.sym == SDLK_ESCAPE)
-    {
-        getRoot()->queueEndRendering();
-    }
-    
-    switch (evt.keysym.sym)
-    {
-    case 'A':
-    case 'a':
-        vel = Ogre::Vector2(-5.f, static_cast<Doodle*>(m_doodle.get())->getVelocity().y);
-
-        m_doodle->setVelocity(vel);
-        break;
-    case 'D':
-    case 'd':
-        vel = Ogre::Vector2(+5.f, static_cast<Doodle*>(m_doodle.get())->getVelocity().y);
-        m_doodle->setVelocity(vel);
-        break;
-
-    }
-
+    InputEngine::GetInstance()->PollEvents(evt);
     
     return true;
 }
 
 bool Game::keyReleased(const KeyboardEvent& evt)
 {
+    InputEngine::GetInstance()->PollEvents(evt);
     vel = Ogre::Vector2(+0.f, static_cast<Doodle*>(m_doodle.get())->getVelocity().y);
     m_doodle->setVelocity(vel);
     return true;

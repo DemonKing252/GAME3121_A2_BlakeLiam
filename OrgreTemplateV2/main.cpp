@@ -18,10 +18,10 @@ int main(int argc, char** argv)
 {
     try
     {
-        Game app;
-        app.initApp();
-        app.getRoot()->startRendering();
-        app.closeApp();
+        
+        Game::GetInstance()->initApp();
+        Game::GetInstance()->getRoot()->startRendering();
+        Game::GetInstance()->closeApp();
     }
     catch (const std::exception& e)
     {
