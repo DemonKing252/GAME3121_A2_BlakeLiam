@@ -52,7 +52,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\..\..\..\ogre-sdk-v2.1\Samples\Media\materials\scripts\MyMaterials.material">
+    <None Include="..\..\..\..\..\..\..\..\ogre-sdk-v2.1\Samples\Media\materials\scripts\LiamBlakeMaterials.material">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

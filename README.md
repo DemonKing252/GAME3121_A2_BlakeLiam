@@ -1,4 +1,6 @@
 # GAME3121_A2_BlakeLiam
+@warning In order to run my project, copy my Material in the project called "LiamBlakeMaterials.material" and place it under your "ogre-sdk-v2.1\Samples\Media\materials\scripts"
+@warning You have to use OpenGL 3 to run this project
 @note To open up the documentation go to (ProjectDirectory)/docs/html/index.html
 @author Liam Blake
 

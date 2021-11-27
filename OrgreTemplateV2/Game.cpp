@@ -1,6 +1,6 @@
 #include "Game.h"
 Game::Game()
-    : ApplicationContext("GAME3121 - Game Engine Development I - Assignment 2 - by Liam Blake")
+    : ApplicationContext("GAME3121 - Game Engine Development I - Assignment 2 - by Liam Blake.")
 {
 }
 
