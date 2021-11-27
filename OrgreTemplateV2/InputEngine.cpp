@@ -60,7 +60,7 @@ void InputEngine::AddKeyUpListener(Keycode param1, void(*callback)())
 	}
 
 
-	m_keyDownDelegates[param1] = callback;
+	m_keyUpDelegates[param1] = callback;
 }
 
 void InputEngine::RemoveInputListener(Keycode param1)
@@ -75,7 +75,7 @@ void InputEngine::PollEvents(const KeyboardEvent& evt)
 		if (del.first == evt.keysym.sym)
 			del.second();
 	}
-	for (std::pair<Keycode, std::function<void(void)>> del : m_keyDownDelegates)
+	for (std::pair<Keycode, std::function<void(void)>> del : m_keyUpDelegates)
 	{
 		if (del.first == evt.keysym.sym)
 			del.second();
