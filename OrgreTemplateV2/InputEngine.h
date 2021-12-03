@@ -62,7 +62,7 @@ namespace Liam
 		*/
 		std::unordered_map<Keycode, std::function<void()>> m_keyUpDelegates;
 
-		/// InputEngine Destructor
+		/// InputEngine Constructor
 		///
 		/// called in game class
 		/// @param (param1) Keycode, (void*(callback()) the function that gets called if this key is pressed down

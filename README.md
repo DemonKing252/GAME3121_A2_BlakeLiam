@@ -4,13 +4,13 @@
 @note To open up the documentation go to (ProjectDirectory)/docs/html/index.html
 @author Liam Blake
 
-@note Use A and D keys to move left and right
+@note Use A and D keys to move left and right. Esc to quit the game
 
 ## Ogre Engines used
 
 #1 - Scene Manager
  
-#2 - Material Manager
+#2 - Material scripting
  
 #3 - Tray Manager
  
