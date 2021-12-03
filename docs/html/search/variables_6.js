@@ -14,7 +14,7 @@ var searchData=
   ['m_5fscorelabel_11',['m_scoreLabel',['../class_game.html#a981ce8cda0585e85f4047a57ba29ad4b',1,'Game']]],
   ['m_5fwinlabel_12',['m_winLabel',['../class_game.html#a3b36a6e0095dbfc7a0970df7c11c0cfd',1,'Game']]],
   ['max_5fplatforms_13',['MAX_PLATFORMS',['../class_game.html#adaca459451333a3e9e2d8b9d1b430ab1',1,'Game']]],
-  ['message_14',['message',['../struct_liam_1_1_key_override_exception.html#a77d964c0a3f780e5006e55e061328c52',1,'Liam::KeyOverrideException']]],
+  ['message_14',['message',['../class_liam_1_1_key_override_exception.html#a77d964c0a3f780e5006e55e061328c52',1,'Liam::KeyOverrideException']]],
   ['mtraymgr_15',['mTrayMgr',['../class_game.html#a4df3c171d63dd990ec0460891dab422d',1,'Game']]],
   ['myentity_16',['myEntity',['../class_doodle.html#a4c8ecc6793480c5301c443c562b0cf2c',1,'Doodle::myEntity()'],['../class_platform.html#a79d8a3dc6c9ba9dbc8d850e5e7dae084',1,'Platform::myEntity()']]],
   ['mytraylistener_17',['myTrayListener',['../class_game.html#af34a45d1eceabfba4403b64d45876348',1,'Game']]]

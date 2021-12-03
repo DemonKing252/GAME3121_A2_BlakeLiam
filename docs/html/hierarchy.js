@@ -4,7 +4,7 @@ var hierarchy =
       [ "Game", "class_game.html", null ]
     ] ],
     [ "std::exception", null, [
-      [ "Liam::KeyOverrideException", "struct_liam_1_1_key_override_exception.html", null ]
+      [ "Liam::KeyOverrideException", "class_liam_1_1_key_override_exception.html", null ]
     ] ],
     [ "GameObject", "class_game_object.html", [
       [ "Doodle", "class_doodle.html", null ],

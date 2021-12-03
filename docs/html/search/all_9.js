@@ -17,7 +17,7 @@ var searchData=
   ['main_2ecpp_14',['main.cpp',['../main_8cpp.html',1,'']]],
   ['max_5fplatforms_15',['MAX_PLATFORMS',['../class_game.html#adaca459451333a3e9e2d8b9d1b430ab1',1,'Game']]],
   ['meshtype_16',['MeshType',['../class_game.html#ad5f541514e0ffdcdc94d527f6ebacc75',1,'Game']]],
-  ['message_17',['message',['../struct_liam_1_1_key_override_exception.html#a77d964c0a3f780e5006e55e061328c52',1,'Liam::KeyOverrideException']]],
+  ['message_17',['message',['../class_liam_1_1_key_override_exception.html#a77d964c0a3f780e5006e55e061328c52',1,'Liam::KeyOverrideException']]],
   ['mousemoved_18',['mouseMoved',['../class_game.html#a36b9393a1cc0ae239d2c897f7caa3227',1,'Game']]],
   ['mtraymgr_19',['mTrayMgr',['../class_game.html#a4df3c171d63dd990ec0460891dab422d',1,'Game']]],
   ['myentity_20',['myEntity',['../class_doodle.html#a4c8ecc6793480c5301c443c562b0cf2c',1,'Doodle::myEntity()'],['../class_platform.html#a79d8a3dc6c9ba9dbc8d850e5e7dae084',1,'Platform::myEntity()']]],

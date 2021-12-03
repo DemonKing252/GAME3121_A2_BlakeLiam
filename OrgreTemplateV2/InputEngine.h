@@ -23,9 +23,9 @@ namespace Liam
 	/// KeyOverrideException class
 	///
 	/// Used for exception handling in my Input engine class
-	struct KeyOverrideException : public std::exception
+	class KeyOverrideException : public std::exception
 	{
-
+	public:
 		/// KeyOverrideException Constructor
 		/// @param (msg) message to show when the exception is caught
 		/// @returns no returns
