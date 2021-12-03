@@ -4,7 +4,7 @@
 ///
 /// #1 - Scene Manager
 /// 
-/// #2 - Material Manager
+/// #2 - Material Scripting
 /// 
 /// #3 - Tray Manager
 /// 
